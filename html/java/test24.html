@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+    <h1 id="tit"><a href="#">돔객체</a></h1>
+    <script>
+        //document객체
+        //자바스크립트가 document를 읽는 순간까지의 
+        //html문서 내의 요소, 속성,css 등 html에 관련된 사항들을 모두 속성으로 저장한다.
+
+        //html요소를 document객체는 자신의 속성으로 어딘가 저장을 하고 그 요소를 가져올 수 있는
+        // document.getElementById("html요소아이디"); id 해당하는 요소 return
+        // document.getElementsByClassName("html요소아이디"); class에 해당하는 요소 return
+        // document.getElementsByTagName("html요소아이디");tag에 해당하는 요소 return
+        // document.querySelector("#id||.class||tag");
+        var h_1 = document.getElementById("tit");
+        //이벤트 타입 : click, dbclick, mouseleave, mouseenter, mousehover,
+        //wheel,mousedown,mouseup,auxclick... 종류많음
+        h_1.addEventListener("click", function(){
+            this.style.fontSize = "12px";
+            this.style.border= "1px solid red";
+            h_1.firstChild.style.color="red";
+        });
+    </script>
+
+
+
+    <h2>클릭해서 이미지 움직이기</h2>
+    <p id ="snow"><img src="imgs/snow1.jpg" alt="첫눈"></p>
+    <script>
+        var bool = true;
+        var p = document.querySelector("#snow");
+        p.firstChild.addEventListener("click",function(){
+        
+            //토글 toggle
+            if(bool){
+                this.src="imgs/snow3.jpg"
+                this.alt="첫번째이미지"
+                bool = false;
+
+            }
+            
+            else{
+                this.src="imgs/snow2.jpg"
+                this.alt="두번째이미지"
+                bool = true;
+            }
+        });
+    </script>
+
+
+    <h3>hover로 이미지 움직이기</h3>
+    <p id="hover"><img src="imgs/say.jpg" alt="아쎄이유쎄이"></p>
+    <script>
+        var p = document.getElementById("hover");
+
+        p.firstChild.addEventListener("mouseenter", function(){
+            this.src="imgs/yeah.jpg"
+                this.alt="유쎄이"
+        });
+
+        p.firstChild.addEventListener("mouseleave", function(){
+            this.src="imgs/say.jpg"
+                this.alt="아쎄이"
+        });
+
+
+    </script>
+    <!--p또는 이미지 클릭했을 떄 이미지 요소가 바뀌도록 작성하기-->
+</body>
+</html>

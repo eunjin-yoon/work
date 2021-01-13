@@ -1,0 +1,80 @@
+/*
+===========================================================================
+                            bx_slider 수정
+===========================================================================
+*/
+
+
+.bx-wrapper {
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+
+.bx-wrapper .bx-controls-direction a {
+    width: 50px;
+    height: 50px;
+}
+
+.bx-wrapper .bx-prev {
+    left: 7%;
+    background: url(imgs/prev3.png)no-repeat;
+}
+
+
+.bx-wrapper .bx-next {
+    right: 7%;
+    background: url(imgs/next3.png)no-repeat;
+}
+
+.bx-wrapper .bx-pager {
+    bottom: 30px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: #3d3d3d;
+    width: 8px;
+    height: 8px;
+    border-radius: 0;
+    margin: 0 10px;
+    opacity: 0.5;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+    background: #fff;
+    opacity: 1;
+}
+
+
+/*
+===========================================================================
+                            기본 slider
+===========================================================================
+*/
+.slidertext01{
+    position: absolute;
+    top: 35%;
+    left: 17%;
+}
+
+.slidertext01>p:nth-child(1){
+    font-family: 'Nanum Myeongjo', serif;
+    letter-spacing: 10px;
+    font-size: 55px;
+    color: #292929;
+    margin-bottom: 15px;
+}
+.slidertext01>p:nth-child(2){
+    font-family: 'Nanum Myeongjo', serif;
+    letter-spacing: 30px;
+    font-size: 55px;
+    color: #B5760A;
+}
+
+.slidertext01>p:nth-child(3){
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 15px;
+    line-height: 23px;
+    width: 280px;
+    color: #3d3d3d;
+}

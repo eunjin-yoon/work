@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        aside#mainBanner {}
+
+        aside#mainBanner>div.bannerBox {}
+
+        aside#mainBanner>div.bannerBox>ul.bannerList {}
+
+        aside#mainBanner>div.bannerBox>ul.bannerList>li {}
+
+        aside#mainBanner>p.btn_prev {}
+
+        aside#mainBanner>p.btn_next {}
+
+        aside#mainBanner>ul.bannerThumbnails {}
+
+        aside#mainBanner>ul.bannerThumbnails>li {}
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+
+
+
+
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!--aside>(div>ul>li*4>a>img)+p*2+ul>li*4>img-->
+
+    <aside id="mainBanner">
+
+        <h1 class="hidden">메인배너</h1>
+
+        <div class="bannerBox">
+
+            <ul class="bannerList">
+
+                <li><a href="#"><img src="imgs/snoope01.png" alt="배너 이미지1"></a></li>
+
+                <li><a href="#"><img src="imgs/snoope02.png" alt="배너 이미지2"></a></li>
+
+                <li><a href="#"><img src="imgs/snoope03.png" alt="배너 이미지3"></a></li>
+
+                <li><a href="#"><img src="imgs/snoope04.png" alt="배너 이미지4"></a></li>
+
+            </ul>
+
+        </div>
+
+        <p class="btn_prev">&lt;<span class="hidden">이전 배너로 이동</span></p>
+
+        <p class="btn_next">&gt;<span class="hidden">다음 배너로 이동</span></p>
+
+        <ul class="bannerThumbnails">
+
+            <li><img src="imgs/aven01.jpg" alt="배너썸네일 1"></li>
+
+            <li><img src="imgs/aven02.jpg" alt="배너썸네일 2"></li>
+
+            <li><img src="imgs/aven03.jpg" alt="배너썸네일 3"></li>
+
+            <li><img src="imgs/aven04.jpg" alt="배너썸네일 4"></li>
+
+        </ul>
+
+    </aside>
+
+</body>
+
+</html>

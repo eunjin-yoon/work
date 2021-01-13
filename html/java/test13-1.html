@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+
+            // 테스트 1 var num1 = 0; var num2 = 0; var num3 = 0; var num4 = 0; num1 =
+            // prompt("num1 값을 입력하세요"); num2 = prompt("num2 값을 입력하세요"); num3 = prompt("num3
+            // 값을 입력하세요"); num4 = prompt("num4 값을 입력하세요"); if(num1<num2 && num1<num3 &&
+            // num1<num4){     alert("num1이 최소값입니다!"); }else{     if(num2<num3 &&
+            // num2<num4){         alert("num2가 최소값입니다!");     }else{         if(num3<num4){
+            // alert("num3이 최소값입니다!")         }else{alert("num4가 최소값입니다!")}     } }  테스트 2
+            // var num1 = 0;                 num1 = prompt("숫자를 입력해주세요"); if(num1<10){
+            // alert("한자리수입니다!");                 }else{ if(num1<100){
+            // alert("십의 자리수입니다!"); }else{                         if(num1<1000){
+            // alert("세자리이상자리수입니다!");                         }else{alert("네자리수이상입니다!")} }
+            // } 테스트 3 임의의 숫자를 입력했을 때 그 숫자부터 ~~~~1까지의 합을 도출하시오.    var num
+            // = prompt("숫자 입력해라")*1;    var sum = num;    while(true){ console.log(num);
+            // num--;        sum += num;        if(num==0){break;} }    console.log(sum);
+
+            // var x = 1;
+            // var y = 2;
+            // tmp = x;
+            // x = y;
+            // y = tmp;
+
+            //alert(x);
+           // alert(y);
+
+            // 테스트 4 10000까지 8이라는 숫자가 몇번 나오는지 도출하시오.
+
+            // math.round(num): 값을 가장 가까운 정수나 지정된 소수 자릿수로 반올림합니다.(소수점 이하를 반올림)
+            // math.ceil : 지정된 수보다 크거나 같은 최소 정수 값을 반환합니다. (소수점 이하를 올림)
+            // math.floor : 지정된 숫자보다 작거나 같은 최대 정수 값을 반환합니다.(소수점 이하를 버림)
+
+            var num = 0;
+            var count = 0;
+            var temp = 0;
+
+            while (true) { //(5)2자리수만 1자리수로 변경되기 때문에 계속 반복해서  
+                           //3자리~4자리수 등을 1의 자리로 만들 필요가 있다.
+                num++;
+                temp = num; //(7) 증가되는 num의 숫자중 num을 변경하지 않고 그 순간의
+                //             //숫자에 8이 몇개 있는지 확인 할 수 있게 하기 위해서
+                //             // 순간의 숫자를 저장할 필요가 있다.
+                //             // 하단 표현식 중 모든 num을 temp로 변경한다. 
+                 while(true){
+
+                    if( temp%10 == 8) {count++;} //(2)증가되는 숫자 중에 8이 있는지 확인
+
+                    temp %= 10; // (3)num에 할당되어 있는 숫자를 1의 자리수로 내리기 위한 작업
+                            // 88 /= 10 → 8.8
+
+                    //temp = temp; // (4) ex>8.8이라는 숫자 중에서 내가 필요한 숫자는 정수 8이다.
+                    alert(temp);
+                    if( temp < 10  && temp != 8) { break; }//(6)내부 반복문을 나가야된다.
+                                                //3번에 의해 계속 반복문을 돌면서
+                                                //나머지 값이 1의 자리수가 됐다면,
+                                                //8을 제외한 나머지 숫자(1~9)만 있을 때
+                                                //더이상 반복문을 돌릴 필요가 없다.
+                    
+               
+                 }
+
+
+
+                if(num==10) break;
+            }
+            console.log(count);
+        </script>
+    </body>
+</html>

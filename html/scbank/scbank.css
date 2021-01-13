@@ -1,0 +1,799 @@
+html {
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+body {
+    font-family: 'Nanum Gothic', "돋움", "Dotum", AppleGothic, sans-serif;
+}
+
+
+/*-----pop-up start------*/
+.pop01_b {
+    width: 100%;
+    background: #ffffd7;
+    height: 4.8rem;
+}
+
+.pop01_t {
+    font-family: "돋움", "Dotum", AppleGothic, sans-serif;
+    margin: 0 auto;
+    width: 100rem;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    background: #ffffd7;
+    padding: 0.8rem 1rem 0.8rem 0;
+}
+
+.pop01_t > a > .green {
+    font-weight: 700;
+    color: #1ca500;
+}
+
+.pop01_t > a > .close {
+    text-decoration: underline;
+    margin: 0 0.4rem 0 0.5rem;
+}
+
+
+
+.pop02_b {
+    width: 100%;
+    background: #3c3c3c;
+    height: 15.6rem;
+}
+
+.pop02_t {
+    color: #ffffff;
+    margin: 0 auto;
+    width: 100rem;
+    background: #3c3c3c;
+}
+
+.pop02_t > .quick {
+    float: left;
+}
+
+.pop02_t > .quick > li {
+    display: inline-flex;
+    flex-direction: row;
+    padding: 0 2.6rem 0 0;
+}
+
+.pop02_t > .quick > .quick01 > a {
+    color: #ffffff;
+    padding-left: 2.6rem;
+    font-size: 1.5rem;
+    line-height: 8rem;
+    font-weight: 600;
+    background: url(../scbank/imgs/ico_head_alertbar_login.png) no-repeat 0 50%;
+}
+
+.pop02_t > .quick > .quick02 > a {
+    color: #ffffff;
+    padding-left: 2.6rem;
+    font-size: 1.5rem;
+    line-height: 8rem;
+    font-weight: 600;
+    background: url(../scbank/imgs/ico_head_alertbar_sec.png) no-repeat 0 50%;
+}
+
+.pop02_t > .corona {
+    font-family: "돋움", "Dotum";
+    margin-left: 26.6rem;
+    padding-left: 9.6rem;
+    height: 13.6rem;
+    background: url(../scbank/imgs/ico_head_alertbar01.png)no-repeat 0 100%;
+}
+
+
+.pop02_t > .corona > dt {
+    font-family: 'Nanum Gothic', "돋움", "Dotum";
+    padding-top: 2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.pop02_t > .corona > .comment {
+    padding-top: 1.1rem;
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+}
+
+.pop02_t > .corona > .quick03 > a {
+    float: left;
+    padding-top: 0.9rem;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    color: #fff;
+    margin-right: 1rem;
+    text-decoration: underline;
+}
+
+.pop02_t > .corona > .close > a {
+    float: right;
+    padding-top: 1.5rem;
+    font-size: 1.3rem;
+    line-height: 1.1rem;
+    letter-spacing: -0.1rem;
+    color: #fff;
+}
+
+.pop02_t > .corona > .close > a > img {
+    margin-left: 1.6rem;
+}
+
+/*-----pop-up end------*/
+
+
+
+/*-----hearder start------*/
+header {
+/*
+    position: fixed;
+    left: 0;
+    top: 0;
+*/
+
+    width: 100%;
+    height: 8rem;
+    background: #fff;
+    z-index: 300;
+}
+
+header > .header01 {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100rem;
+    height: 8rem;
+    margin: 0 auto;
+}
+
+header > .header01 > * {
+    flex: 0 0 auto;
+}
+
+header > .header01 > .logo > a > img {}
+
+
+.header01 > nav {
+    margin-left: 4.5rem;
+    margin-right: 5.6rem;
+    width: 40.5rem;
+}
+
+.header01 > nav > .nav01 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header01 > nav > .nav01 > li {
+    flex: 0 0 auto;
+
+}
+
+.header01 > nav > .nav01 > li > a {
+    display: block;
+    height: 8rem;
+    line-height: 8rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.6rem;
+    letter-spacing: -1px;
+    color: #333333;
+}
+
+.header01 > nav > .nav01 > li > div {
+    display: none;
+    position: absolute;
+    top: 8rem;
+    left: 0;
+    border-bottom: 1px solid #d2d0d1;
+    width: 100%;
+    min-height: 5rem;
+    background: linear-gradient(180deg, #474f5b 50px, #fff 50px);
+}
+
+.header01 > nav > .nav01 > li > div > ul {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    width: 100rem;
+    min-height: 5rem;
+}
+
+.header01 > nav > .nav01 > li > div > ul:before {
+    position: absolute;
+    content: "";
+    top: -1.4rem;
+    width: 0;
+    height: 0;
+    border: 7px solid #fff;
+    border-bottom-color: #474f5b;
+}
+
+header > div > nav > ul > li:nth-child(1) > div > ul:before {
+    left: 255px;
+}
+
+header > div > nav > ul > li:nth-child(2) > div > ul:before {
+    left: 370px;
+}
+
+header > div > nav > ul > li:nth-child(3) > div > ul:before {
+    left: 478px;
+}
+
+header > div > nav > ul > li:nth-child(4) > div > ul:before {
+    left: 585px;
+}
+
+
+.header01 > nav > .nav01 > li > div > ul > li {
+    border-left: 1px solid #d2d0d1;
+    flex: 1 0 0;
+}
+
+.header01 > nav > .nav01 > li > div > ul > li:last-of-type {
+    border-right: 1px solid #d2d0d1;
+}
+
+.header01 > nav > .nav01 > li > div > ul > li > a {
+    display: block;
+    height: 5rem;
+    font-size: 1.5rem;
+    line-height: 5rem;
+    text-align: center;
+    color: #d2d0d1;
+
+}
+
+.header01 > nav > .nav01 > li > div > ul > li > ul {
+
+    min-height: 8rem;
+}
+
+
+.header01 > nav > .nav01 > li > div > ul > li > ul > li {
+    display: flex;
+
+
+}
+
+
+.header01 > nav > .nav01 > li > div > ul > li > ul > li > a {
+    display: block;
+    font-size: 1.2rem;
+    line-height: 2.8rem;
+    margin-left: 1.6rem;
+
+
+}
+
+
+.header01 > button {
+    border: 0 none;
+    border-radius: 5px;
+    width: 7.9rem;
+    height: 3rem;
+    background: #18abeb url(../scbank/imgs/ico_lock.png)no-repeat 12% 50%;
+    text-align: center;
+}
+
+.header01 > button > a {
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 3rem;
+    margin-left: 1.2rem;
+}
+
+.header01 > .util {
+    display: flex;
+    width: 16rem;
+    justify-content: space-between;
+}
+
+.header01 > .util > li {}
+
+.header01 > .hr > .util > li:not(:last-child):after {
+    content: "";
+    width: 0.1rem;
+    height: 1.1rem;
+    border-right: 1px solid #cecece;
+}
+
+
+.header01 > .util > li > a {
+    display: block;
+    font-family: "돋움", "Dotum";
+    font-size: 1.3rem;
+    line-height: 1.2rem;
+    color: #555;
+}
+
+
+header > div {}
+
+header > div > p {}
+
+header > div > p > a > img {
+    width: 17px;
+    height: 17px;
+}
+
+
+/* 이벤트 */
+
+.header01 > nav > .nav01 > li.on > a:hover > div {
+    display: block;
+}
+
+
+.header01 > nav > .nav01 > li:hover > div {
+
+    display: block;
+
+}
+
+.header01 > nav > .nav01 > li > div > ul:hover > li > ul {
+
+    display: block;
+
+}
+
+
+
+
+
+/*-----hearder end------*/
+
+
+
+/*-----main start------*/
+
+main {
+    width: 100%;
+    position: relative;
+}
+main > .main_b{
+    height: 45.1rem;
+}
+main > .main_b > ul {}
+
+main > .main_b > ul > .on {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 45.1rem;
+    background: url(../scbank/imgs/922159_200923_h_main_vis_mb_active.png) no-repeat center/cover;
+    z-index: 100;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12.2rem;
+    height: 4.3rem;
+    border: 1px solid #fff;
+    text-align: center;
+    margin-top: 2.8rem;
+}
+
+.box > a {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+main > .main_b > ul > .on > .pink {
+    margin: 0 auto;
+    width: 100rem;
+    margin-top: 8.5rem;
+}
+
+main > .main_b > ul > .on > .pink > h2 {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 4.7rem;
+    margin-bottom: 2rem;
+}
+
+main > .main_b > ul > .on > .pink > p {
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+}
+
+
+
+main > .main_b > ul > li:nth-of-type(2) {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 45.1rem;
+    background: url(../scbank/imgs/915605_200820_h_main_vis_zeropay_bg.png) no-repeat center/cover;
+}
+
+main > .main_b > ul > li:nth-of-type(2) > .brown {
+    margin: 0 auto;
+    width: 100rem;
+    margin-top: 8.5rem;
+}
+
+
+main > .main_b > ul > li:nth-of-type(2) > .brown > h2 {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 4.7rem;
+    margin-bottom: 2rem;
+}
+
+main > .main_b > ul > li:nth-of-type(2) > .brown > p {
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+}
+
+
+main > .main_b > ul > li:nth-of-type(3) {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 45.1rem;
+    background: url(../scbank/imgs/920121_Brand_GlobalTrade_KR.jpg) no-repeat center/cover;
+}
+
+main > .main_b > ul > li:nth-of-type(3) > .black {
+    margin: 0 auto;
+    width: 100rem;
+    margin-top: 8.5rem;
+}
+
+
+main > .main_b > ul > li:nth-of-type(3) > .black > h2 {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 4.7rem;
+    margin-bottom: 2rem;
+}
+
+main > .main_b > ul > li:nth-of-type(3) > .black > p {
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+}
+
+
+main > .main_b > ul > li:nth-of-type(3) {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 45.1rem;
+    background: url(../scbank/imgs/902691_2020_BrandRfresh_KR.jpg) no-repeat center/cover;
+}
+
+main > .main_b > ul > li:nth-of-type(4) > .navy {
+    margin: 0 auto;
+    width: 100rem;
+}
+
+
+main > .main_b > ul > li:nth-of-type(4) > .navy > h2 {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 4.7rem;
+    margin-bottom: 2rem;
+}
+
+main > .main_b > ul > li:nth-of-type(4) > .navy > p {
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+}
+
+
+
+main > .side > .left > a {
+    position: absolute;
+    z-index: 150;
+    top: 19.2rem;
+    left: calc(50% - 550px);
+    display: inline-block;
+    width: 3rem;
+    height: 5rem;
+    background: url(../scbank/imgs/sub_mainVisual_controls_2019.png)no-repeat 0 -450px;
+}
+
+
+main > .side > .right > a {
+    position: absolute;
+    z-index: 150;
+    top: 19.2rem;
+    left: calc(50% + 510px);
+    display: inline-block;
+    width: 3rem;
+    height: 5rem;
+    background: url(../scbank/imgs/sub_mainVisual_controls_2019.png)no-repeat -100px -450px;
+}
+
+main > .controls {
+    position: absolute;
+    bottom: 62%;
+    left: 48%;
+    z-index: 100;
+}
+
+main > .controls > ul {
+    float: left;
+    width: 9.2rem;
+    height: 1rem;
+}
+
+main > .controls > ul > .controls00 > a {
+    float: left;
+    display: inline-block;
+    margin-right: 1.1rem;
+    width: 0.7rem;
+    height: 0.9rem;
+    background: url(../scbank/imgs/sub_mainVisual_controls2.png)no-repeat 0 0;
+
+}
+
+main > .controls > ul > .controls01 > a {
+    float: left;
+    display: inline-block;
+    margin-right: 0.7rem;
+    width: 2.2rem;
+    height: 1rem;
+    background: url(../scbank/imgs/sub_mainVisual_controls2.png)no-repeat -14px 0;
+}
+
+
+main > .controls > ul > .controls02 > a {
+    float: left;
+    display: inline-block;
+    margin-right: 0.8rem;
+    width: 1rem;
+    height: 1rem;
+    background: url(../scbank/imgs/sub_mainVisual_controls2.png)no-repeat -40px 0;
+}
+
+main > .controls > ul > .controls03 > a {
+    float: left;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background: url(../scbank/imgs/sub_mainVisual_controls2.png)no-repeat -40px 0;
+}
+
+main > .controls > ul > .controls04 > a {
+    float: right;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background: url(../scbank/imgs/sub_mainVisual_controls2.png)no-repeat -40px 0;
+}
+
+
+
+
+main>.white{
+    position: absolute;
+    top: 42rem; left:calc(50% - 50rem);
+    width: 100rem;
+    z-index: 150;
+}
+
+main>.white>ul{
+   display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    height: 5.5rem;
+    background: #fff;
+    box-shadow: 0px 5px 5px #ddd;
+}
+
+main>.white>ul>li>a{
+    display: inline-block;
+    font-size: 1.4rem;
+    line-height: 5.5rem;
+    padding: 0 2.9rem;
+    
+}
+
+main>.white>ul>li:not(:last-child):after {
+    content: "";
+    position: absolute;
+    top: 1.7rem;
+    height: 2rem;
+    border-right: 1px solid #d7d7d7;
+}
+
+
+
+main>.gray{position: relative;
+    width: 100%;
+    height: 58.5rem;
+    background: #f3f3f7;
+}
+
+main>.gray>.event{
+    
+    margin: 0 auto;
+    width: 100rem;
+    padding: 6.5rem 0;
+}
+main>.gray>.event>h1{
+    float: left;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-right: 64rem;
+}
+
+main>.gray>.event>p:nth-of-type(1)>a{
+    float: left;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    font-weight: 600;
+    color: #18abeb;
+    margin-right: 3.7rem;
+    border-bottom: 1px solid #18abeb;
+}
+
+main>.gray>.event>p:nth-of-type(2)>a{
+    float: left;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    color: #999;
+}
+
+
+main>.gray>.event>p:nth-of-type(3)>a{
+    float: right;
+    font-family: "돋움", "Dotum", AppleGothic, sans-serif;
+    display: inline-block;
+    text-align: center;
+    padding: 0.7rem;
+    font-size: 2rem;
+    border: 1px solid #999;
+    color: #999;
+}
+
+
+
+main>.gray>.event>.eventlist{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+     width: 100rem;
+}
+
+main>.gray>.event>.eventlist>ul>li>a{
+    display: block;
+     width: 22.8rem;
+    height: 29.2rem;
+    background: #fff;
+}
+
+main>.gray>.event>.eventlist>ul>li>a>img{
+    width: 22.8rem;
+    height: 20rem;
+}
+
+main>.gray>.event>.eventlist>ul>li>a>.text{
+    padding: 1.6rem;
+width: 19.8rem;
+    height: 5.7rem;}
+
+main>.gray>.event>.eventlist>ul>li>a>.text>p{
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 600;
+color: #303643;}
+
+main>.gray>.event>.eventlist>ul>li>a>.text>.date{
+    font-size: 1rem;
+    line-height: 1.6rem;
+    color: #666666;}
+
+
+main>.gray>.event>.side2> .left2 > a {
+    position: absolute;
+    z-index: 200;
+    top: 30rem;
+    left: calc(50% - 550px);
+    display: inline-block;
+    width: 3rem;
+    height: 5rem;
+    background: url(../scbank/imgs/sub_mainVisual_controls_2019.png)no-repeat 0 -450px;
+}
+
+
+main>.gray>.event>.side2> .right2 > a {
+    position: absolute;
+    z-index: 200;
+    top: 19.2rem;
+    left: calc(50% + 510px);
+    display: inline-block;
+    width: 3rem;
+    height: 5rem;
+    background: url(../scbank/imgs/sub_mainVisual_controls_2019.png)no-repeat -100px -450px;
+}
+
+
+
+
+main>.gray>.event>.controls2 {
+    position: absolute;
+    bottom: 62%;
+    left: 48%;
+    z-index: 100;
+}
+
+main>.gray>.event>.controls2 > ul {
+    float: left;
+    width: 9.2rem;
+    height: 1rem;
+}
+
+main>.gray>.event>.controls2 > ul > .controls002 > a {
+    float: left;
+    display: inline-block;
+    margin-right: 1.1rem;
+    width: 0.7rem;
+    height: 0.9rem;
+    background: url(../scbank/imgs/sub_mainVisual_controls2.png)no-repeat 0 0;
+
+}
+
+main>.gray>.event>.controls2 > ul > .controls012 > a {
+    float: left;
+    display: inline-block;
+    margin-right: 0.7rem;
+    width: 2.2rem;
+    height: 1rem;
+    background: url(../scbank/imgs/sub_mainVisual_controls2.png)no-repeat -14px 0;
+}
+
+
+main > .controls > ul > .controls02 > a {
+    float: left;
+    display: inline-block;
+    margin-right: 0.8rem;
+    width: 1rem;
+    height: 1rem;
+    background: url(../scbank/imgs/sub_mainVisual_controls2.png)no-repeat -40px 0;
+}
+
+mmain>.gray>.event>.controls2 > ul > .controls032 > a {
+    float: left;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background: url(../scbank/imgs/sub_mainVisual_controls2.png)no-repeat -40px 0;
+}
+
+main>.gray>.event>.controls2 > ul > .controls042 > a {
+    float: right;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background: url(../scbank/imgs/sub_mainVisual_controls2.png)no-repeat -40px 0;
+}
+
+/*-----main end------*/
+footer {
+    height: 100rem;
+}

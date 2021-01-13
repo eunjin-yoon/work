@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            
+            //1.jQuery객체, 이벤트명(function(){이벤트 발생시 실행할 구문 });
+            //객체에 이벤트명을 붙여서 작동되게 한다.
+
+
+            //2.jQuery객체, bind(function(){이벤트 발생시 실행할 구문 });
+            //객체에 이벤트를 붙여서 작동되게 한다.
+            //bind대신에 unbind를 사용하면 붙여져 있던 이벤트가 있다면,
+            //이를 삭제할 수 있다.
+            //setTimeout(function(){아이템.unbind("click")},1시간 56분);
+
+            //3.jQuery객체.on("이벤트명","자손",function(){ 이벤트 발생시 실행할 구문});
+            //아직 생성되지 않은 요소에게 미리 이벤트를 예약할 수 있다.
+
+
+
+
+            $("li").eq(0).click(function(){
+
+                
+
+                //16px 아래로 감소되지 않는다.
+                //한번 클릭시 2px씩 감소된다.
+                var size = parseInt( $("p").eq(0).css("font-size") );
+                size -= 2;
+
+                if(size < 16) {size = 16;}
+
+                $("p").css("font-size" , size);
+
+            });
+
+
+
+            $("li").eq(1).click(function(){
+                
+            //24px증가되지 않는다.
+            //한번 클릭시 2px씩 증가된다.
+
+                var size = parseInt($("p").eq(1).css("font-size"));
+                size += 2;
+
+                if(size > 24) {size = 24;}
+
+                $("p").css("font-size",size);
+
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <h1>글자 키우기</h1>
+    <ul>
+        <li>-</li>
+        <li>+</li>
+    </ul>
+    <p>
+        각 정부출연연구기관(출연연)에 산재된 감사 기능을 국가과학기술연구회(NST)로 모으는 
+        '출연연 감사일원화'가 추진되는 가운데, 감사위원 수에 대한 방침 변화를 두고 뒷말이
+        나오고 있다. 당초 계획보다 위원 수를 늘리는 안을 놓고 연구 현장과 정치권·정부 의견이
+        엇갈린다.
+    </p>
+
+    <p>
+        출연연 감사일원화는 NST 내 자체 감사 전담 조직을 두고 독립성·전문성을 확보하는 것이
+        골자로, 현장 안팎의 공감대를 형성했다. 출연연 설립·운영 및 육성 법률(출연연법) 개정으로
+        현실화를 앞두고 있다.
+    </p>
+
+    <p>
+        근래 규모가 급격하게 불어났다. 국회와 과학기술정보통신부 등에 따르면 당초 과기정통부는
+        상근 감사위원 1명, 위원 역할이 가능한 단장 1명을 시작으로 감사일원화에 나설 방침으로
+        내년 예산안을 구성했다. 감사위원을 7명까지 둘 수 있지만 조직 출범 후 상황을 봐 늘리고자
+        한 NST 계획에 따랐다.
+    </p>
+
+</body>
+</html>

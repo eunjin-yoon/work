@@ -1,0 +1,381 @@
+
+/*-----MAIN START-----*/
+main {
+    margin: 0 auto;
+    padding-top: 5.3rem;
+    width: 120rem;
+}
+
+main > .main_top {
+    width: 100vw;
+    text-align: center;
+    border: none;
+    background: #dbdbdb;
+}
+main > .main_top > div {
+    width: 100vw;
+}
+
+main > .main_top > video {
+    margin-top: 8.3rem;
+    width: 100%;
+}
+
+main > div {
+    width: 100vw;
+
+}
+main > div > .fourbox {
+    display: flex;
+    flex-wrap: wrap;
+    width: 98.5%;
+    overflow: hidden;
+    line-height: 0;
+
+}
+
+main > div > .fourbox li {
+    width: 50%;
+    line-height: 0;
+    overflow: hidden;
+}
+
+main > div > .fourbox li > a {
+    position: relative;
+    display: block;
+    line-height: 0;
+    overflow: hidden;
+
+}
+
+main > div > .fourbox li > a > img:first-of-type {
+    width: 100%;
+}
+
+main > div > .fourbox li > a > img:nth-of-type(2) {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+main > div > .fourbox li > a > img:last-of-type {
+
+    position: absolute;
+    bottom: 0;
+    right: -11.6%;
+    width: 80%;
+}
+
+/*-----NEWS START-----*/
+
+main > .middle {
+    clear: both;
+    width: 100vw;
+    margin-top: 2.3rem;
+}
+
+main > .middle > .middle_left {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100vw;
+    margin-left: 2rem;
+}
+main > .middle > .middle_left > div.b_news {
+    width: 100vw;
+}
+main > .middle > .middle_left > div.b_news > h1 {
+
+    font-size: 2.6rem;
+    font-weight: 600;
+    padding: 0 2rem;
+    line-height: 6.4rem;
+    height: 6.4rem;
+    color: #004ba9;
+    width: 90vw;
+    border-top: 0.2rem solid #004ba9;
+    border-bottom: 0.1rem solid #e1e1e1;
+    margin-bottom: 2rem;
+}
+
+
+
+main > .middle > .middle_left > .b_news {
+    width: 50%;
+    height: 22.4rem;
+}
+
+main > .middle > .middle_left > .b_news > ul {
+    width: 70%;
+}
+
+main > .middle > .middle_left > .b_news > ul > li {
+
+    margin-left: 2rem;
+}
+
+main > .middle > .middle_left > .b_news > ul > li > a {
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: #222222;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+main > .middle > .middle_left > .b_news > ul > li > time {
+    display: inline-block;
+    color: #666666;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+}
+
+main > .middle > .middle_left > .b_news > p {
+    margin: 2rem 0;
+    font-family: 'Nanum Gothic', "돋움",Dotum,sans-serif;
+    width: 95%;
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+    color: #333333;
+}
+
+main > .middle > .middle_left > .s_news {
+    margin-top: 6rem;
+    width: 50vw;
+    height: 29rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+main > .middle > .middle_left > .s_news > .news_box {
+
+    box-sizing: border-box;
+    width: 300%;
+    height: 22rem;
+
+}
+
+main > .middle > .middle_left > .s_news > .news_box ul {
+    float: left;
+    width: 33.3%;
+    box-sizing: border-box;
+}
+
+main > .middle > .middle_left > .s_news > .news_box > ul > li {
+    margin-top: 2rem;
+    width: 90%;
+    height: 3.4rem;
+    border-bottom: 0.1rem solid #e1e1e1;
+
+}
+
+main > .middle > .middle_left > .s_news > .news_box > ul > li > a {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    width: 50%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0.4rem 0 0 0.6rem;
+    color: #222222;
+}
+
+main > .middle > .middle_left > .s_news > .news_box > ul > li > time {
+    float: right;
+    font-size: 1.3rem;
+    padding-top: 0.4rem;
+    color: #666;
+}
+
+main > .middle > .news > .s_news > .news_box > ul {
+    float: left;
+    width: 34.7rem;
+    height: 34.5rem;
+}
+
+.orange_b {
+    display: inline-block;
+    box-sizing: border-box;
+    color: #e17350;
+    border: 0.1rem solid #e17350;
+    border-radius: 0.2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    text-align: center;
+    padding: 0 0.4rem;
+    height: 2.1rem;
+    margin-top:;
+}
+
+.orange {
+    display: inline-block;
+    float: left;
+    box-sizing: border-box;
+    color: #e17350;
+    border: 0.1rem solid #e17350;
+    border-radius: 0.2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    text-align: center;
+    padding: 0 0.6rem;
+    height: 2.1rem;
+}
+/*-------------슬라이더---------------*/
+
+.slider {
+    overflow: hidden;
+    margin-top: 2rem;
+    margin-left: -2%;
+    width: 45vw;
+    padding-left: 1rem;
+    box-sizing: border-box;
+}
+
+.slider > a:first-of-type {
+    float: left;
+    width: 1.5rem;
+}
+
+.slider > a:last-of-type {
+    float: right;
+    width: 1.5rem;
+}
+
+
+.slider > ul {
+    float: left;
+    width: calc(100% - 3rem);
+    text-align: center;
+}
+
+.slider > ul > li {
+    display: inline-block;
+}
+
+.slider > ul > li:nth-of-type(2) {
+    padding: 0 1.4rem;
+}
+
+/*-----MIDDLE RIGHT-----*/
+
+.middle_right {
+
+    width: 100vw;
+
+}
+.middle_right > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.middle_right > div > dl {
+    margin-bottom: 5rem;
+    width: 48%;
+    border-top: 0.2rem solid #004ba9;
+    background: url("../imgs/img_menu_more02_m.png") no-repeat 95% 7%;
+    background-size: 2.4rem 2.4rem;
+}
+
+.middle_right > div > dl > dt > a {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+    color: #004ba9;
+    margin-top: 2.2rem;
+    padding: 0 2rem;
+}
+
+.middle_right > div > dl > dd.txt > a {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    margin-top: 2.4rem;
+    padding: 0 2rem;
+    color: #004ba9;
+}
+
+.middle_right > div > dl > dd.visual {
+    margin-top: 3.8rem;
+    font-size: 0;
+    line-height: 0;
+}
+
+.middle_right > div > dl > dd.visual > a {
+    display: block;
+}
+
+.middle_right > div > dl > dd.visual > a > img {
+    width: 100%;
+
+}
+
+/*-----BOTTOM MENU-----*/
+
+.bottom_menu {
+    width: 100vw;
+}
+
+.bottom_menu>div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 96vw;
+    margin: 0 auto;
+}
+.bottom_menu >div> dl {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    height: 7rem;
+    margin-top: 5rem;
+    border: 1px solid #ccc;
+    background: url(../imgs/img_menu_more.png)no-repeat 95% 50%;
+    background-size: 2.4rem 2.4rem;
+}
+.bottom_menu >div> dl > dd:nth-of-type(1){
+    padding-left: 2rem;
+    width: 20%;
+
+}
+.bottom_menu >div> dl > dd:nth-of-type(2){
+    width: 80%;
+
+}
+.bottom_menu >div> dl > dd > a >img{
+
+    width: 4.2rem;
+    height: 4.1rem;
+}
+
+.bottom_menu >div> dl >.bm >a{
+    padding-left:1.5rem ;
+    font-size: 1.8rem;
+    display: block;
+    
+    
+
+}
+
+/*-----EVENT-----*/
+
+main > div > .fourbox li > a:hover > img:nth-last-of-type(2) {
+    display: block;
+}
+
+main > div > .fourbox li > a:hover > img:last-of-type {
+    position: absolute;
+    right: 0;
+    bottom: 0.1rem;
+    transition: all 0.50s;
+}

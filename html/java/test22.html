@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //복합데이터타입 vs 기초데이터타입        
+        //변수를 호출시 반응하는 타입
+        //call by reference VS call by value
+        
+        var origin = {x:10}
+        var refer = origin;
+        
+        refer.x = 20;
+        console.log(origin.x);  
+        
+        var val = 10;
+        var copy = val;
+        copy = 20;
+        console.log(val);
+        
+        var student = {name:"학생"}
+        
+        var moveStudent = student.name;
+        
+        moveStudent = "전학생";
+        
+        alert(student.name);
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

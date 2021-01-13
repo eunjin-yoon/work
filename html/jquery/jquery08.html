@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        ul {
+            margin: 0 auto;
+            border: 1px solid rgba(80, 80, 80, 0.5);
+            width: 1000px;
+        }
+
+        ul>li:not(:first-child) {
+            border-top: 1px solid rgba(80, 80, 80, 0.5);
+        }
+
+        ul>li>h2 {
+            font: bold 24px/48px sans-serif;
+            text-align: center;
+        }
+
+        ul>li>h2.on{
+            background: red;
+            color: #fff;
+
+        }
+
+        ul>li>p {
+            display: none;
+            padding: 10px;
+            border-top: 1px solid rgba(80, 80, 80, 0.3);
+            line-height: 32px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+
+            //1. 어디에서 이벤트가 발생하는가
+            //2. 이벤트 발생시 어떤 요소가 어떻게 작동하는가
+
+            $("h2").click(function(){
+                $(this).addClass("on").next().slideToggle(300, function(){
+                    if($("this").css("display") == "none"){
+                        $(this).prev().removeClass("on");
+                    }
+                });
+
+                //유저가 클릭한 h2의 이외의 h2의 다음 p는 닫혀라.
+                $("h2").not(this).removeClass("on").next().slideUp(300);
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>아코디언 메뉴</h1>
+    <ul>
+        <li>
+            <h2>메뉴1</h2>
+            <p>서울=연합뉴스 한성간 기자 = 광범위한 독감 바이러스 변종에 효과가 있는 '범용'(universal) 독감 예방백신이 미국 연구팀에 의해 개발됐다. <br />
+                미국 뉴욕 마운트 시나이(Mount Sinai) 의대의 플로리안 크래머 미생물학 교수팀은 변이를 일으키지 않는 독감 바이러스의 특수 부위 단백질을 이용, 광범위한 독감 바이러스 변종에
+                효과가 있는 범용 독감 백신을 개발했다고 헬스데이 뉴스가 8일 보도했다.
+            </p>
+        </li>
+        <li>
+            <h2>메뉴2</h2>
+            <p>현재의 독감 백신은 독감 바이러스의 막대사탕처럼 생긴 표면단백질 헤마글루티닌(HA:hemagglutinin)의 돌출한 머리 부분을 이용하고 있다.<br>
+
+                이 머리 부분은 둥근 모양이라서 면역체계가 만드는 항체가 결합하기는 쉽지만, 돌연변이를 잘 일으킨다. 따라서 돌연변이를 일으킬 때마다
+                새 백신을 만들어야 하는 번거로움이 따른다. 머리
+                부분이 움직이는 표적(moving target)이라 불리는 것도 이 때문이다.<br>
+
+                그러나 새로 개발된 이 범용 백신은 HA의 머리 부분이 아니고 줄기의 끝부분(stalk end)을 이용한다고 연구팀은 밝혔다.<br>
+
+                줄기의 끝부분은 모든 독감 바이러스 변종들이 모양이 거의 같다고 연구팀은 설명했다.<br>
+
+                지원자 65명을 대상으로 진행한 1상 임상시험에서 이 독감 백신은 광범위한 독감 바이러스 변종에 "강력하고 폭넓고 오래 가는" 면역 반응을
+                유발했다고 연구팀은 밝혔다.
+            </p>
+        </li>
+        <li>
+            <h2>메뉴3</h2>
+            <p>면역반응은 최소한 18개월 지속됐다. <br>
+
+                따라서 2번 또는 3번 추가 접종하면 지금의 독감 백신처럼 매년 맞을 필요가 없을 것이라고 연구팀은 설명했다.
+            </p>
+        </li>
+        <li>
+            <h2>메뉴4</h2>
+            <p>또 이 범용 독감 백신은 면역력이 폭넓은 만큼 앞으로 새로 나타나는 독감 바이러스 변종에도 효과가 있을 것으로 연구팀은
+                예상하고 있다.<br>
+                1상 임상시험은 이 백신의 안전성과 면역체계 자극 능력을 검증하기 위한 것이었다.<br>
+                우선 이 백신은 안전한 것으로 입증됐다.<br>
+                부작용은 일시적 근육통 등 현재 사용되는 전통적 독감 백신과 비슷했다.</p>
+        </li>
+        <li>
+            <h2>메뉴5</h2>
+            <p>이 백신을 맞은 임상시험 참가자들의 혈액 샘플을 분석한 결과 바이러스의 독성을 약화한 생백신(live attenuated vaccine)은
+                죽은 바이러스를 이용하는 불활성 사백신(inactivated vaccine)보다 면역반응이 약한 것으로 나타났다.
+            </p>
+        </li>
+    </ul>
+
+</body>
+
+</html>

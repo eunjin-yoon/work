@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            //커피전문점
+            function Coffee(){
+                this.americano = 4100;
+                this.cafuccino = 4300;
+                this.latte = 4300;
+                this.amount = 0; //매출
+                this.level = "normal" //"vip"
+            }
+
+            Coffee.prototype.pos = function(x){
+                this.amount += x;
+                if(this.amount>10000000){
+                    this.level = "vip";
+                }
+            }
+
+            var starCoffee1 = new Coffee();
+            var starCoffee3 = new Coffee();
+            var starCoffee4 = new Coffee();
+
+            var num = 0;
+            while(num<770){
+                num++;
+            starCoffee1.pos(starCoffee1.americano);
+            starCoffee1.pos(starCoffee1.cafuccino);
+            starCoffee1.pos(starCoffee1.latte);
+            starCoffee1.pos(starCoffee1.americano);
+            starCoffee1.pos(starCoffee1.americano);
+        }
+
+
+            alert(starCoffee1.amount);
+            alert(starCoffee1.level);
+        </script>
+    </body>
+</html>

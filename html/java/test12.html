@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 온라인 쇼핑몰 회원의 등급적용과 그 등급에 따른 선물 적용할 수 있는 구문을 작성하시오. point변수는 임의로 값을 할당.
+            // 1.point의 값에 의해
+            // 2.grade변수에 값이 할당이 된다. point 0~50이라면 bronze, 51~100 silver, 101~200 gold,
+            // 201이상은 vip 등급이 bronze alert('무료배송'); 등급이 silver alert('무료배송');
+            // alert('5%할인권'); 등급이 gold alert('무료배송'); alert('5%할인권'); alert('이벤트쿠폰'); 등급이
+            // vip alert('무료배송'); alert('5%할인권'); alert('이벤트쿠폰'); alert('point적립');
+
+
+
+
+            var grade='';
+            var point = 0;
+            while(true){
+                //prompt에서 취소버튼을 클릭하면 0값이 할당.
+                var temp = prompt('물건값을 입력하고, 사고싶지 않을 때는 취소를 눌러주세요')*(1/1000);
+                
+                if(temp == 0){
+                    break;
+                }else{
+                    point += temp;
+                }
+            }
+
+            if(point<=50){
+                grade ='bronze'
+            }else if(point<=10){
+                grade = 'silver'
+            }else if(point<=200){
+                grade = 'gold'
+            }else{
+                grade = 'vip';
+            }
+
+            alert('당신의 등급은 '+grade+' 입니다.');
+            alert('이번달 등급 서비스는 다음과 같습니다.');
+            if(point>0){alert('무료배송');}
+            if(point>51){alert('50%할인권');}
+            if(point>101){alert('이벤트쿠폰');}
+            if(point>201){alert('point적립');}
+
+
+
+
+        </script>
+
+    </body>
+</html>

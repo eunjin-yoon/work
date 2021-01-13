@@ -1,0 +1,237 @@
+header {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+}
+
+header > div {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin: 0 auto;
+
+    width: 1000px;
+    height: 80px;
+
+}
+
+header > div > * {
+
+    flex: 0 0 auto;
+
+}
+
+header > div > h1 {
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 184px;
+    height: 43px;
+
+    background: lightblue;
+
+}
+
+header > div > nav {
+
+    width: 445px;
+    background: yellow;
+
+}
+
+/*여기서부터시작-----------------------------------*/
+header > div > nav > ul {
+    display: flex;
+}
+
+header > div > nav > ul > li {
+    flex: 1 0 0;
+    border: 1px solid red;
+}
+
+header > div > nav > ul > li > a {
+    height: 80px;
+    line-height: 80px;
+
+    display: block;
+    text-align: center;
+
+    font-size: 15px;
+    letter-spacing: -1px;
+
+}
+
+header > div > nav > ul > li > div {
+
+    display: none;
+
+    position: absolute;
+    top: 80px;
+    left: 0;
+
+    width: 100%;
+    min-height: 50px;
+
+    background: linear-gradient(180deg, #474f5b 50px, #fff 50px);
+
+}
+
+header > div > nav > ul > li > div > ul {
+
+    display: flex;
+
+    position: relative;
+
+    margin: 0 auto;
+
+    width: 1000px;
+    min-height: 50px;
+
+    background: green;
+
+}
+
+header > div > nav > ul > li > div > ul:before {
+
+    position: absolute;
+    top: -14px;
+
+    content: "";
+
+    width: 0;
+    height: 0;
+
+    border: 7px solid #fff;
+
+    border-bottom-color: #474f5b;
+
+}
+
+header > div > nav > ul > li:nth-child(1) > div > ul:before {
+    left: 255px;
+}
+
+header > div > nav > ul > li:nth-child(2) > div > ul:before {
+    left: 370px;
+}
+
+header > div > nav > ul > li:nth-child(3) > div > ul:before {
+    left: 478px;
+}
+
+header > div > nav > ul > li:nth-child(4) > div > ul:before {
+    left: 585px;
+}
+
+
+header > div > nav > ul > li > div > ul > li {
+    flex: 1 0 0;
+}
+
+header > div > nav > ul > li > div > ul > li > a {
+    display: block;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+
+header > div > nav > ul > li > div > ul > li > ul {
+
+    display: none;
+
+    margin: 13px 0;
+
+    font-size: 12px;
+    line-height: 28px;
+
+}
+
+
+
+/* 이벤트 */
+
+header > div > nav > ul > li.on > div {
+    display: block;
+}
+
+header > div > nav > ul > li:hover > div {
+
+    display: block;
+
+}
+
+header > div > nav > ul > li > div > ul:hover > li > ul {
+
+    display: block;
+
+}
+
+
+
+
+header > div > p {
+    border-radius: 5px;
+    width: 79px;
+    height: 30px;
+    background: lightblue;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+}
+
+header > div > dl {
+    display: flex;
+    justify-content: space-around;
+    width: 182px;
+    font-size: 12px;
+}
+
+
+header > div > div {
+    position: relative;
+}
+
+header > div > div>p {background: lightgreen;}
+
+header > div > div > p >img{width: 17px; height: 17px;
+background:url(../scbank/imgs/ico_search.png)no-repeat 0 0;}
+
+header > div > div > form { 
+    position: absolute;
+    right: 0; top: 0;
+    border-radius: 5px;
+background: #fff;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

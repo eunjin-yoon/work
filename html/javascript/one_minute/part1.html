@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>은선언니문제</title>
+</head>
+<body>
+    <script>
+    // 문제1 
+        
+        var major = prompt ("수학과,컴퓨터공학과,산업디자인학과,국문과 중에 전공을 입력해주세요");
+        var base= "";
+        var eng= "영어";
+
+        if(major=="수학과"||major=="컴퓨터공학과"||major=="산업디자인학과"||major=="국문학과"){
+            base=major;
+        alert("전공에서 요구되는 기본 능력은 "+base+"입니다.");
+        if(major=="수학과"){
+            alert("수학");
+            alert(eng);
+        }
+        if(major=="컴퓨터공학과"){
+            alert("컴퓨터");
+        }
+        if(major=="산업디자인학과"){
+            alert("디자인");
+        }
+        if(major=="국문학과"){
+            alert("국어");
+        }
+        }else{
+            alert("과를 잘못 입력하셨습니다");
+        }
+        
+    
+
+
+
+
+    </script>
+</body>
+</html>

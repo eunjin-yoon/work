@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../reset.css">
+        <title>Document</title>
+        <style>
+            body,
+            html {
+                height: 100%;
+            }
+            body {
+                background: url("imgs/maxresdefault.jpg") no-repeat 50% 50%;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+
+            $(function () {
+
+                //윈도우 크기 알아내기
+                var w = $(window).width() / 2;
+                var h = $(window).height() / 2;
+
+                // 이미지 크기 알아내기
+                var url = $("body").css("background-image");
+                var idx1 = url.indexOf("(") + 2;
+                var idx2 = url.indexOf(")") - 1;
+                url = url.substring(idx1, idx2);
+
+                $("<img src='" + url + "' id='tmpId' />").appendTo($("body"));
+                
+        
+                    var imgW = $("body").children("#tmpId").width()/2;
+                    var imgH = $("body").children("#tmpId").height()/2;
+                    alert(imgW + "/" + imgH);
+                    if(imgW != 0 && imgH != 0){
+                        $("#tmpId").remove();
+                        alert(imgW +'/'+ imgH);
+                    }
+              
+
+                //마우스가 움직일때 배경이 움직임.
+                $(window).mousemove(function(e) {
+                    //e를 쓰면 정보를 받겠다는 의미. 안쓰면 정보 안받겠다는 의미.
+                    var poseX = e.pageX;
+                    //사라지는 정보이기때문에 저장을 해야함
+                    var poseY = e.pageY;
+
+                    $("h1").text(poseX + "/" + poseY);
+
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+<h1></h1>
+
+    </body>
+</html>

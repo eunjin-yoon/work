@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link rel="stylesheet" href="../reset.css">
+        <style>
+
+            /*
+
+        *{margin:0; padding:0;}
+        li{list-style:none;}
+        a{text-decoration: none;}
+
+*/
+
+            div#bannerBox {
+
+                overflow: hidden;
+                position: relative;
+                width: 200px;
+                height: 50px;
+                border: 3px solid red;
+        
+
+            }
+
+            div#bannerBox > ul#bannerList {
+
+                display: flex;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 500%;
+                /* 보여줄 자식 요소가 5개이기 때문에 5x */
+                height: 50px;
+
+            }
+
+            div#bannerBox > ul#bannerList > li {
+                flex: 1 1 auto;
+            }
+
+            div#bannerBox > ul#bannerList > li.first {
+                background:lightcoral;
+            }
+            div#bannerBox > ul#bannerList > li.second {
+                background: lightsalmon;
+            }
+            div#bannerBox > ul#bannerList > li.third {
+                background:lightgoldenrodyellow;
+            }
+            div#bannerBox > ul#bannerList > li.fourth {
+                background: lightgreen;
+            }
+            div#bannerBox > ul#bannerList > li.fifth {
+                background:lightskyblue;
+            }
+
+            p.btnPrev {}
+            p.btnNext {}
+
+            ul.bullet {}
+            ul.bullet > li {}
+            ul.bullet > li.on {background: red; color: ;}
+
+
+
+
+        </style>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script>
+            
+        $(function () {
+            var banner = {idx:0 ,len:$("#bannerList").children().length}
+
+            $('.btnNext').click(function(){
+
+
+                banner.idx++;
+                if(banner.idx >= banner.len){
+                    banner.idx = 0;
+                }
+                $('.bullet').children('li')
+                .eq(banner.idx).addClass('on')
+                .siblings().removeClass('on');
+
+                $('#bannerList').stop(true,true)
+                     .animate({'left':'-100%'},1000,function(){
+
+                    var _this = $(this);
+                    $('#bannerList').children().first().appendTo(_this);
+                    _this.css('left,0');
+
+                })
+
+            });
+
+                 $('.btnNext').click(function(){
+                     $('#bannerList').stop(true,true).animate({'left':'-100%'},1000, function(){
+
+                        var _this = $(this);
+                        $('#bannerList').children().first().appendTo(_this);
+                        _this.css('left',0);
+
+                     });
+                 });
+
+                 $('.btnPrev').click(function(){
+
+                    banner.idx--; 
+
+                    if(banner.idx < 0){
+                        banner.idx = banner.len - 1;  
+                    }
+
+                    $(".bullet").children("li")
+                    .eq(banner.idx).addClass("on")
+                    .siblings().removeClass("on");
+
+
+
+                    var bannerUl = $('#bannerList');
+
+                    bannerUl.children().last().prependTo(bannerUl);
+                    bannerUl.css('left','-100%');
+                    bannerUl.stop(false, false).animate({'left':0},1000);
+                     
+                 });
+
+                 $('.bullet').children('li').click(function(){
+
+
+                    var idx = $(this).index();
+
+                 });
+
+            });
+        </script>
+
+    </head>
+
+    <body>
+
+        <div id="bannerBox">
+
+            <ul id="bannerList">
+                <li class="first">1번 배너</li>
+                <li class="second">2번 배너</li>
+                <li class="third">3번 배너</li>
+                <li class="fourth">4번 배너</li>
+                <li class="fifth">5번 배너</li>
+
+            </ul>
+
+        </div>
+
+        <p class="btnPrev">이전</p>
+        <p class="btnNext">다음</p>
+
+        <ul class="bullet">
+            <li class="on">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+
+    </body>
+
+</html>

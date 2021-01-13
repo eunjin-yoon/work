@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <h1 id="num">1</h1>
+    <p><button id="plus">+(증가)</button><button id="minus">-(감소)</button></p>
+    <script>
+        
+        //document.write("전달인자"); --->body에 쓰여진다.
+        //document.write를 사용할때는 꼭 요소가 비어있어야 한다.
+        
+        var n = 0;
+        var numNumNum = document.querySelector("#num");
+        
+        
+        
+        //기존의 값은 삭제하고 새로 값을 생성한다.
+        //요소객체에 글자를 넣는 속성은 innerText
+        //요소객체에 요소를 넣는 속성은 innerHTML (요소,string 등...)
+        //numNumNum.innerHTML= "<a href='#'>하하하</a>";
+        
+        var btnP = document.querySelector("#plus");
+        btnP.addEventListener("click", function(){
+            ++n;
+            if(n>10){n=10;}
+            numNumNum.innerHTML= n;
+        });
+        
+        var btnM = document.querySelector("#minus");
+        btnM.addEventListener("click", function(){
+            --n;
+            if(n<1){n=1}
+            numNumNum.innerHTML= n;
+        });
+
+
+        //        var btnP = document.querySelector("#plus");
+//방법2-비표준  btnP.onclick=function(){++n;
+//                  if(n>10){n=10;}
+//                  numNumNum.innerHTML = n;
+//             }        
+
+//방법1        btnP.addEventListener("click",function(){
+//            ++n;
+//            if(n>10){n=10;}
+//            numNumNum.innerHTML = n;
+//        });
+
+//        var btnM = document.querySelector("#minus");
+//        btnM.addEventListener("click",function(){
+//            --n;
+//            if(n<1){n=1
+//            numNumNum.innerHTML = n;
+//        });
+        
+        
+        
+        
+    
+    </script>
+    
+</body>
+</html>

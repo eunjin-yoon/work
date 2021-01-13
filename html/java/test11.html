@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            //중첩 || 이중 반복문 끝내기
+
+            var outerNum = 0;
+            var innerNum = 0;
+
+            while(true){
+                outerNum++; //1,2,3,4,,,,
+                if(outerNum == 5) continue; //outerNum이 5일때를 건너뛴다.
+                while(true){
+                   
+                    innerNum++; //1,2,3,4,5,6,7,8,9
+                    if(innerNum == 1) continue;
+                    if(innerNum>9){
+                        innerNum=0;
+                        break;
+                    }
+                    console.log('외부숫자'+outerNum+"/내부숫자"+innerNum);
+                }
+                if(outerNum==9){break;}
+            }
+           
+
+
+    </script>
+    
+</body>
+</html>

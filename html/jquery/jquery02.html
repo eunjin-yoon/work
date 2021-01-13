@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script>
+         $(function(){
+
+            var txt = $("h1").text();
+            var time = new Date();
+            txt += time.getFullYear()+"-"+time.getMonth()+"-"+time.getMonth()+"-"
+            +time.getDate()+"에 배우는 jQuery";
+
+            //console.log(txt);
+            $("p").text(txt);
+
+
+            //h1의 글자 크기를 가져와서 글자크기를 2배로 만드시오.
+            var size = $("h1").css("font-size");//parseInt(:"전달인자");
+            //string들의 전달인자를 숫자화한다.
+            console.log(size);  
+            $("h1").css("font-size", size*2);          
+
+            // var len = document.getElementsByTagName("li").length;
+            var len = $("li").length;
+
+            //var arr = [a,b,c,o,p]
+
+            for(var i = 0; i<len; i++){
+                var tmpSize = parseInt($("li").eq(i).css("font-size"));
+                $("li").eq(i).css("font-size",tmpSize*(i+2));
+           }
+
+           var ings = ["공부중","식사중","노래중","운동중","자는중"];
+                // ings[3]
+           // aaaa는 공부중, bbb는 식사중, ccc는 노래중, ddd는 운동중, eee는 자는중
+
+           
+           for(var k = 0; k<len; k++){
+               var tmpText = $("li").eq(k).text();
+               $("li").eq(k).text(tmpText+"는(은)"+ings[k]);
+           }
+
+           //각 li의 속성과 값을 변경해 본다.
+           //첫번째 li는 color, red
+           //두번째 li는 background, yellow
+           //세번째 li는 border, 1px solid green
+           //네번째 li는 text-decoration, underline
+           //다섯번째 li는 font-style, italic
+           
+           var properties = ["color","background","border","text-decoration","font-style"]
+           var value = ["red","yellow","1px solid green","underline","italic"]
+           
+           // var properties = [
+           //     {"color":"red"},
+           //     {"background":"yellow"},
+            //    {"border":"1px solid green"},
+           //     {"text-decoration":"underline"},
+           //     {"font-style","italic"}];
+
+            for(var j = 0; j<len; j++){
+               $("li").eq(j).css(properties[j],value[j]); //css("속성","값"), css({속성:값,,,,})
+           } //for문 끝
+
+           //jQuery만의 for문을 each라고 한다.
+           $("집합선택자").each(function(i,v){
+             $("li").eq(i).css(properties[i],value[i]);
+              //$("li").eq(i).css(properties[i],value[i]);
+              //$(v).css(properties[i],value[i]);
+              $(this).css(properties[i],value[i]);
+           });
+
+           function each(i,v){
+               this = v;
+               for(i=0;i<v.siblingsNode.length+1)
+           }
+
+
+
+         });//jQuery ready 끝
+
+
+     </script>
+</head>
+<body>
+    <h1>getter, setter 및 each</h1>
+    <ul>
+        <li>aaa</li>
+        <li>bbb</li>
+        <li>ccc</li>
+        <li>ddd</li>
+        <li>eee</li>
+    </ul>
+</body>
+</html>

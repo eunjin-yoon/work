@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. 1~100(또는 원하는 숫자)까지 숫자 중에서 홀수는 홀수대로 짝수는 짝수끼리의 합을 구하시오.
+//        sum100(prompt("1부터 원하는 숫자까지 합산합니다. 원하는 숫자를 입력하시오."));
+//        function sum100(x){
+//            var num = 0;
+//            var oddSum = 0;
+//            var evenSum = 0;
+//            while(num<x){
+//                num++;
+//
+//                if(num%2 == 1){//홀수
+//                    oddSum += num;
+//                }else{//짝수
+//                    evenSum += num;
+//                }
+//
+//            }
+//            console.log(oddSum);
+//            console.log(evenSum);
+//        }
+        
+        
+        //2. 피보나치의 수
+        //1, 1, 2, 3, 5, 8, 13, ,,,
+        //반복하는 숫자를 입력하면 그에 해당하는 피보나치 숫자들을 나열하시오.
+        
+        //1. 반복하는 숫자 ==> 유저 입력
+        //2. prevPrev
+        //3. prev
+        //4. now = prevPrev + prev
+        //   prevPrev = prev
+        //   prev = now
+        
+        var numFibo = prompt("피보나치 수열을 반복하는 횟수를 입력하시오.");
+        var startNum = 2;
+        if(numFibo ==1 ){
+            var result="1"; //결과 숫자   
+        }else if(numFibo >= 2){
+            var prevPrev = 0;
+            var prev = 1;
+            var now = prev + prevPrev;
+            result += ", "+now;  
+        }
+
+        if(numFibo>=3){
+           while(startNum<numFibo){ 
+            
+                prevPrev = prev; 
+                prev = now; 
+
+                now = prev + prevPrev; 
+
+                startNum++;
+                result += ", "+now; 
+            } 
+        }
+        
+        
+        console.log(result);
+        
+        
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

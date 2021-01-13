@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            table {
+                width: 500px;
+                border: 2px solid palevioletred;
+            }
+            td {
+                border: 1px solid lightcoral;
+            }
+        </style>
+        <script>
+
+        </script>
+    </head>
+    <form action="test.jsp" name="ice">
+        <p><label for="na">이  름</label><input type="text" name="na" id="na"></p>
+        <p><label for="pr">가  격</label><input type="text" name="pr" id="pr"></p>
+        <p><label for="br">브랜드</label><input type="text" name="brands" id="br"></p>
+        <button name="btnInput">입    력</button>
+        <button name="btnShow">정보 보기</button>
+
+    </form>
+
+    <div id="showBox">
+
+        
+
+    </div>
+
+    
+
+    <script>
+
+        //이벤트 연결
+
+        document.ice.btnInput.addEventListener("click",function(e){
+            e.preventDefault();
+            var nas = document.ice.na;
+            var prs = document.ice.pr;
+            var brs = document.ice.br;
+
+            
+
+            if(nas != "" && prs !="" && brs !=""){
+                names.push(nas.value);
+                prices.push(prs.value);
+                brands.push(brs.value);
+                alert("입력됐음");
+
+                nas.value=""; //setter
+                prs.value="";
+                brs.value="";
+
+            }else{
+
+                alert("값이 입력되지 않았습니다. 확인하시고 다시 실행하시오."); 
+
+            }          
+
+//            console.log(names);
+//            console.log(prices);
+//            console.log(brands);
+
+        });
+
+        console.log(na);
+
+        var names     = ["브라보콘", "구구콘", "메타콘", "월드콘", "허쉬콘"]
+        var prices    = [1500, 2000, 1800, 1500, 2400]
+        var brands    = ["롯데", "빙그레", "해태", "오리온", "삼양"]
+
+        var icecream = [names, prices, brands]
+
+        //2중 for문
+        //icecream[i][j] 
+        //i가 외부에서 반복(외부반복)될 때 j역시 계속 반복(내부반복)된다. 
+        //i가 반복을 하면서 멈출때(외부반복)마다 j는 계속 반복(내부반복)된다. 
+
+        
+
+//        document.write("<table><thead><tr><th colspan='6'> 아이스크림 </th></tr></thead><tbody>");
+//        for(var i=0; i<icecream.length; i++){
+//            
+//            document.write("<tr>");
+//            if(i==0){
+//               document.write("<th> 아이스크림 명 : </th>");
+//            }else if(i==1){
+//               document.write("<th> 가격 : </th>");
+//            }else if(i==2){
+//               document.write("<th> 브랜드 : </th>");      
+//            }
+//               
+//            
+//            for(var j =0; j<names.length; j++){
+//                document.write("<td>"+icecream[i][j]+"</td>");
+//            }
+//            
+//            document.write("</tr>");
+//            
+//        }
+//        document.write("</tbody></table>");
+
+  document.ice.btnShow.addEventListener("click",function(e){
+
+            e.preventDefault();
+
+            showIcecream();
+
+  });
+
+  function showIcecream(){
+
+        var txt = "<table><thead><tr><th>이름</th><th>가격</th><th>브랜드</th></tr></thead><tbody>";
+
+        for(var i=0; i<names.length; i++){
+
+          txt += "<tr>";
+
+ 
+
+          for(var j=0; j<icecream.length; j++){
+
+            txt += "<td>"+icecream[j][i]+"</td>";
+
+          }              
+
+          txt += "</tr>";
+
+        }
+
+        txt += "</tbody></table>";
+
+      
+
+        var box = document.querySelector("#showBox");
+        box.innerHTML = txt;
+
+        
+
+  }
+
+          
+
+        </script>
+    </body>
+</html>

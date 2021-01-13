@@ -1,0 +1,104 @@
+
+
+/*-----FOOTER-----*/
+.footer {
+    width: 100%;
+    height: 15.7rem;
+    background: #263238;
+    margin-top: 10rem;
+}
+
+.footer > .black_box {
+    position: relative;
+    margin: 0 auto;
+    width: 120rem;
+    height: 5.5rem;
+    background: #263238;
+}
+
+.footer > .black_box > .um {
+    float: left;
+    padding-top: 2.1rem;
+    padding-left: -0.2rem;
+}
+
+.footer > .black_box > .um > dd {
+    position: relative;
+    float: left;
+}
+
+.footer > .black_box > .um > dd:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1.4rem;
+    border-right: 1px solid #a1a197;
+}
+
+.footer > .black_box > .um > dd > a {
+    padding: 0 0.6rem;
+    color: #a1a1a1;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.4rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+}
+
+
+
+.footer > .black_box > .us {
+    display: flex;
+    padding-left: 0.7rem;
+    padding-top: 1.8rem;
+    width: 10rem;
+    height: 2.2rem;
+    justify-content: space-between;
+    align-items: space-between;
+}
+
+.footer > .black_box > select {
+    position: absolute;
+    right: 0;
+    top: 0;
+    float: right;
+    box-sizing: border-box;
+    font-size: 1.4rem;
+    border: 0 none;
+    width: 23rem;
+    height: 5.5rem;
+    color: #a1a1a1;
+    background: #1e292e;
+}
+
+
+.footer > .gray_m {
+    width: 100%;
+    height: 10.3rem;
+    background: #e9eaeb;
+}
+
+.footer > .gray_m > .gray_box {
+    margin: 0 auto;
+    width: 120rem;
+    background: #e9eaeb;
+    height: 10.3rem;
+}
+
+
+.footer > .gray_m > .gray_box > h1 > img {
+    float: left;
+    margin-top: 2.6rem;
+}
+
+.footer > .gray_m > .gray_box > address {
+    float: left;
+    padding-top: 2.2rem;
+    padding-left: 2.1rem;
+}
+
+.footer > .gray_m > .gray_box > address > ul > li {
+    color: #37474f;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .outer{
+            
+            position: relative;
+            border : 1px solid red;
+            width: 1600px;
+            height: 800px;
+        }
+
+        .moveBox{
+
+            position: absolute;
+            left: 0; top: 0;
+            width: 80px; 
+            height: 80px;
+            background: red;
+        }
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+             $('.moveBox').click(function(){
+
+                var _fx, _this = $(this);
+               
+                //전체 애니메이션은 실행개수만큼 쌓이게 된다.
+                //쌓이는 애니메이션은 먼저 실행한 애니메이션이 끝나야
+                //다음 애니메이션을 실행한다.
+                //이렇게 실행되는 애니메이션이 쌓이는 것을 fx라고 한다.
+                //하나씩 애니메이션이 배열처럼 줄서 있는것을 queue(큐)라고 한다.
+
+                _this.animate({left:1450},{duration : 2000,queue: false},
+                function(){
+
+                    //jquery 객체가 애니메이션이 걸려있는 상황에서
+                    //jquery 객체 . queue('fx'); > 애니메이션 관리하는 fx를 return
+                        _fx = _this.queue('fx');
+                    $('h1>span').text(_fx.length);
+                  
+                })
+                .animate({width:150},{duration : 2000, queue: false},
+                function(){
+                    
+                })
+                .animate({height:150},{
+                     duration : 2000,
+                     queue: false},function(){
+                    
+                })
+                .animate({top:650},{
+                     duration : 2000,
+                     queue: false},function(){
+                    
+                });
+
+                
+               $('h2').click(function(){
+                    //$('.moveBox').stop(true);
+               });
+
+
+             });
+
+        });
+    </script>
+
+</head>
+<body>
+    <h1>애니메이션 개수 : <span></span></h1>
+    <h2>애니메이션 멈춰라</h2>
+    <div class="outer">
+            <div class="moveBox"></div>
+    </div>
+</body>
+</html>

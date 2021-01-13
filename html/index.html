@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>미디어 태그</h1>
+    <p>영상과 음성에 대한 지원 태그</p>
+    <dl>
+        <dt>video태그 - 쌍태그</dt>
+        <dd>속성 src : 잘 사용하지 않음, preload: 웹페이지를 열자마자 비디오
+            파일을 자동으로 로딩, poster="이미지소스" : 동영상에 대한 대체 이미지,
+            controls: 영상제어버튼, autoplay : 웹페이지 열자마자 자동재생
+            mute,loop : 무한반복 재생 </dd>
+        <dd>자식태그로는 source태그를 사용 source의 속성으로는 src="영상경로"
+            type="video/파일형식 mp4, oggo webm"
+            source태그는 fallback을 한다. 브라우저마다 지원하는 형식이 다르기 때문이다.</dd>
+        세가지 타입의 형식을 모두 사용해야 모든 브라우저에서 지원가능한다.
+        <dd>track태그 자막 태그 srclang="": ko,jp...kind="" subtitles :자막,
+            label="한글이당" 현재 자막에 대한 라벨링, src=""자막경로, default: 자막관련 track
+            태그가 여러개있을 때 기본 자막을 설정하는 속성</dd>
+        <dd>video태그 내부에 video태그를 지원하지 않는 브라우저를 사용하는 유저를 위해서
+            fallback문구를 넣을 수 있다.</dd>
+    </dl>
+    
+    <video controls autoplay loop preload poster="medio/flower.jpg">
+        <source src="media/flower.mp4" type="video/mp4"><!--모든 브라우저 지원-->
+        <source src="media/flower.mgv" type="video/ogg"><!--ie,safari제외 지원-->
+        <source src="media/flower.webm" type="video/webm"><!--ie 제외하고 모두 지원-->
+        
+        비디오 태그를 지원하지 않는 브라우저입니다.
+          <track kind="subtitles" src="media/track.vtt" srcsrclang="ko" label="한글이야" default >
+        <track kind="subtitles" src="media/track.vtt" srcsrclang="eng" label="영어야">
+    </video>
+
+
+
+</body>
+
+</html>

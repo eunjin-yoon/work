@@ -1,0 +1,308 @@
+html {
+    font-size: 62.5%;
+}
+.mobile {
+    display: none;
+}
+a {
+    text-decoration: none;
+    font-family: 'Nanum Gothic', "돋움", Dotum, AppleGothic, sans-serif;
+    letter-spacing: -0.8px;
+}
+
+header {
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.15);
+}
+
+header > .header {
+    margin: 0 auto;
+    width: 120rem;
+    height: 8.3rem;
+    display: flex;
+    flex: 0 0 1;
+    justify-content: space-between;
+}
+
+header > div > h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*-----NAV START-----*/
+
+nav {
+    display: flex;
+    width: 87rem;
+}
+
+.header ul.depth1 {
+
+    display: flex;
+    align-items: center;
+    width: 87rem;
+    padding: 0 8rem;
+    justify-content: space-around;
+
+}
+
+.header .depth1 > li {
+    position: relative;
+    display: flex;
+}
+
+.header .depth1 > li > a {
+    display: block;
+    line-height: 2.4rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: #222222;
+}
+
+.header .depth1 > li > a:hover {
+    border-bottom: 3px solid #07399c;
+}
+
+/*-----NAV depth2 START-----*/
+
+.header > nav > .depth1 > .construct > .depth2 {
+    display: none;
+    position: absolute;
+    top: 5.5rem;
+    left: -5rem;
+    width: 18.5rem;
+    background: #07399c;
+    z-index: 9999;
+}
+
+.header > nav > .depth1 > .construct > .depth2 > li {
+    height: 4.3rem;
+    border-bottom: 0.1rem solid #03205f;
+}
+
+.header > nav > .depth1 > .construct > .depth2 > li.being {
+    position: relative;
+    background: url("../imgs/bu_2depth.png") no-repeat 93% 50%;
+
+}
+
+.header > nav > .depth1 > .construct > .depth2 > .dh > a {
+    display: block;
+    height: 4.3rem;
+    color: #ffffff;
+    font-size: 1.3rem;
+    line-height: 4.3rem;
+    margin-left: 2.1rem;
+}
+
+.header > nav > .depth1 > .construct > .depth2 > li > a {
+
+    display: block;
+    height: 4.3rem;
+    color: #ffffff;
+    font-size: 1.3rem;
+    line-height: 4.3rem;
+    margin-left: 2.1rem;
+}
+
+.header > nav > .depth1 > .construct > .depth2 > li > .depth3 {
+    display: none;
+    position: absolute;
+    left: 18.5rem;
+    top: 0;
+    width: 18.8rem;
+    background: #fff;
+    border: 0.1rem solid #03205f;
+}
+
+.header > nav > .depth1 > .construct > .depth2 > li > .depth3 > li {
+    height: 3.4rem;
+    padding-left: 1.9rem;
+    background: url(../imgs/bg_3depth_line.gif)no-repeat 8px 50%;
+}
+
+.header > nav > .depth1 > .construct > .depth2 > li > .depth3 > li > a {
+    display: block;
+    font-size: 1.3rem;
+    color: #000;
+    line-height: 3.4rem;
+}
+
+/*-----NAV depth2 event-----*/
+
+.header > nav > .depth1 > .construct:hover > .depth2 {
+    display: block;
+}
+
+.header > nav > .depth1 > .construct > .depth2 > .dh:hover {
+    background: #00a6ff;
+    border: 0.1rem solid #03205f;
+}
+
+.header > nav > .depth1 > .construct > .depth2 > li:hover {
+    background: #fff;
+    border: 0.1rem solid #03205f;
+}
+
+.header > nav > .depth1 > .construct > .depth2 > .being:hover {
+    background: #fff url(../imgs/bu_2depth_on.png)no-repeat 93% 50%;
+    border: 0.1rem solid #03205f;
+}
+
+.header > nav > .depth1 > .construct > .depth2 > .dh > a:hover {
+    color: #fff;
+}
+
+.header > nav > .depth1 > .construct > .depth2 > li > a:hover {
+    color: #000;
+}
+
+.header > nav > .depth1 > .construct > .depth2 > li:hover > .depth3 {
+    display: block;
+}
+
+/* 제품검색 시작 --------------------*/
+
+.header > div {
+    display: flex;
+}
+
+.header > div > .header_search {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header > div > .header_search > .mobile {
+    display: none;
+}
+
+.header > div > .header_search > button {
+    
+    border: 0 none;
+    box-sizing: border-box;
+    padding: 0 3.2rem 0 0.6rem;
+    width: 9.2rem;
+    height: 3.6rem;
+    font-size: 11.5px;
+    line-height: 3.7rem;
+    font-weight: bold;
+    color: #eceff1;
+    border-radius: 5px;
+    text-align: center;
+    background: #424c51 url("../imgs/ic_search.png") no-repeat 90% 50%;
+}
+
+header >.header > div >.header_search > form {
+    display: none;
+    position: absolute;
+    right: -5rem;
+    top: 8.3rem;
+    width: 32rem;
+    height: 5rem;
+    background: #424c51;
+    z-index: 999;
+}
+
+header > div.header > div > div.header_search > form > input:nth-of-type(1) {
+    border: 0 none;
+    margin-top: 1.3rem;
+    margin-left: 1.5rem;
+    width: 20.3rem;
+    height: 2rem;
+    background: url("../imgs/bg_head_search.png") no-repeat 10% 50%;
+    padding-left: 1rem;
+    color: #fff;
+    outline: 0 none;
+}
+
+header > div.header > div > div.header_search > form > input:nth-of-type(1):focus {
+    background: none;
+}
+
+header > div.header > div > div.header_search > form > input:nth-of-type(2) {
+    position: absolute;
+    top: 1.4rem;
+    right: 5.4rem;
+}
+
+header > div.header > div > div.header_search > form > input:nth-of-type(3) {
+    position: absolute;
+    top: 1rem;
+    right: 4rem;
+}
+
+header > div.header > div > div.header_search > form > input:nth-of-type(4) {
+    position: absolute;
+    top: 1.8rem;
+    right: 1.3rem;
+}
+
+header > div.header >  div > div.header_local {
+    padding: 2.3rem 0 0 0.3rem;
+    width: 4.6rem;
+    height: 8.3rem;
+    
+}
+
+header > div.header > div > div.header_local > a {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 4.6rem;
+    height: 3.6rem;
+    border: 1px solid #a9b0b8;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 3rem;
+    background: url("../imgs/country_off.png") no-repeat 50% 25px;
+    color: #222;
+    font-family: Verdana;
+}
+
+header > div.header > div ul.local {
+    display: none;
+    z-index: 9999;
+    width: 4.6rem;
+    height: 6rem;
+    box-sizing: border-box;
+    border: 1px solid #a9b0b8;
+    background: #fff;
+}
+
+header > div.header > div > div.header_local > ul.local > li {
+    font-size: 1.1rem;
+    line-height: 3rem;
+    text-align: center;
+    color: #222;
+}
+
+/*제품검색-----언어선택-------이벤트---------------*/
+
+header > .header > div > .header_local:hover > ul {
+    display: block;
+    border-bottom: 1px solid #a9b0b8;
+}
+
+header > div.header > div > div.header_local > a:hover {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+header > .header > div > .header_search > form > fieldset > input:nth-of-type(1):hover {
+    background: none;
+}
+
+header > div.header > div > div.header_search:hover > form {
+    display: block;
+}

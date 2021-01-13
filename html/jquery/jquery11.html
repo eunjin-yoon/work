@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <title>Document</title>
+
+        <link rel="stylesheet" href="../reset.css">
+
+        <style>
+
+            aside#mainBanner {
+
+                position: relative;
+
+                margin: 0 auto;
+
+                width: 800px;
+
+            }
+
+            aside#mainBanner > div.bannerBox {
+                }
+
+            aside#mainBanner > div.bannerBox > ul.bannerList {
+
+                position: relative;
+
+                height: 500px;
+
+            }
+
+            aside#mainBanner > div.bannerBox > ul.bannerList > li {
+
+                display: none;
+
+                position: absolute;
+
+                left: 0;
+                top: 0;
+
+            }
+
+            aside#mainBanner > div.bannerBox > ul.bannerList > li.on {
+
+                display: block;
+
+                z-index: 1000;
+
+            }
+
+            aside#mainBanner > p.btn_prev {
+
+                z-index: 2000;
+
+                position: absolute;
+                left: 20px;
+                top: calc(40% - 40px);
+
+                font: bold 80px/80px arial,sans-serif;
+
+                color: #fff;
+
+                cursor: pointer;
+
+            }
+
+            aside#mainBanner > p.btn_next {
+
+                z-index: 2000;
+
+                position: absolute;
+                right: 20px;
+                top: calc(40% - 40px);
+
+                font: bold 80px/80px arial,sans-serif;
+
+                color: #fff;
+
+                cursor: pointer;
+
+            }
+
+            aside#mainBanner > ul.bannerThumbnails {
+
+                display: flex;
+
+                margin: 50px auto 0;
+
+                width: 440px;
+
+            }
+
+            aside#mainBanner > ul.bannerThumbnails > li {
+
+                flex: 0 0 100px;
+
+                border: 5px solid #fff;
+
+                font-size: 0;
+                line-height: 0;
+
+            }
+
+            aside#mainBanner > ul.bannerThumbnails > li.on {
+
+                border-color: red;
+
+            }
+        </style>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script>
+
+            $(function () {
+
+                //setInterval(함수, 시간);
+
+                var banner = {
+
+                    idx: 0,
+
+                    len: $(".bannerList")
+                        .children("li")
+                        .length,
+
+                    auto: setInterval(middle, 3000)
+
+                }
+
+                function middle() {
+
+                    banner.idx++;
+
+                    if (banner.idx > (banner.len - 1)) {
+
+                        banner.idx = 0;
+
+                    }
+
+                    make();
+
+                }
+
+                function make() {
+
+                    $(".bannerList")
+                        .children("li")
+                        .eq(banner.idx)
+                        .fadeIn(500)
+                        .siblings("li")
+                        .fadeOut(500);
+
+                    $(".bannerThumbnails")
+                        .children("li")
+                        .eq(banner.idx)
+                        .addClass("on")
+                        .siblings("li")
+                        .removeClass("on");
+
+                }
+
+                //1. 이벤트 선택
+
+                $(".btn_next").click(function () {
+                    clearInterval(banner.auto);
+                    banner.idx++;
+
+                    if (banner.idx > (banner.len - 1)) {
+
+                        banner.idx = 0;
+
+                    }
+
+                    make();
+                    banner.auto = setInterval(middle,3000);
+
+                }); //next End
+
+                $(".btn_prev").click(function () {
+                    clearInterval(banner.auto);
+                    banner.idx--;
+
+                    if (banner.idx < 0) {
+
+                        banner.idx = banner.len - 1;
+
+                    }
+
+                    make();
+                    banner.auto = setInterval(middle,3000);
+
+                }); //prev End
+
+                $(".bannerThumbnails")
+                    .children("li")
+                    .click(function () {
+                        clearInterval(banner.auto);
+                        // 객체.index() ===> 객체가 형제 요소와 같이 있을 때 순번지를 return하는 getter메소드. getter이기 때문에
+                        // metohd chaining을 사용할 수 없다.
+
+                        banner.idx = $(this).index();
+
+                        make();
+                        banner.auto = setInterval(middle,3000);
+                    });
+
+            });
+        </script>
+
+    </head>
+
+    <body>
+
+        <!--aside>(div>ul>li*4>a>img)+p*2+ul>li*4>img-->
+
+        <aside id="mainBanner">
+
+            <h1 class="hidden">메인배너</h1>
+
+            <div class="bannerBox">
+
+                <ul class="bannerList">
+
+                    <li class="on">
+                        <a href="#"><img src="imgs/aven01_B.jpg" alt="배너 이미지1"></a>
+                    </li>
+
+                    <li>
+                        <a href="#"><img src="imgs/aven02_B.jpg" alt="배너 이미지2"></a>
+                    </li>
+
+                    <li>
+                        <a href="#"><img src="imgs/aven03_B.jpg" alt="배너 이미지3"></a>
+                    </li>
+
+                    <li>
+                        <a href="#"><img src="imgs/aven04_B.jpg" alt="배너 이미지4"></a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <p class="btn_prev">&lt;<span class="hidden">이전 배너로 이동</span></p>
+
+            <p class="btn_next">&gt;<span class="hidden">다음 배너로 이동</span></p>
+
+            <ul class="bannerThumbnails">
+
+                <li class="on"><img src="imgs/aven01.jpg" alt="배너썸네일 1"></li>
+
+                <li><img src="imgs/aven02.jpg" alt="배너썸네일 2"></li>
+
+                <li><img src="imgs/aven03.jpg" alt="배너썸네일 3"></li>
+
+                <li><img src="imgs/aven04.jpg" alt="배너썸네일 4"></li>
+
+            </ul>
+
+        </aside>
+
+    </body>
+
+</html>

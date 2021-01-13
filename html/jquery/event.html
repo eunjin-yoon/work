@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+
+        #typo{
+            width: 100px;
+            height: 50px;
+            background-color: blue;
+        }
+        #typo .inner{
+           
+            color:#fff;
+            text-align: center;
+            line-height: 50px;
+        }
+
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+        //#typo .inner { text-decoration:underline;}
+        $(function(){
+            // $('h1').css('color','red');
+            // $('#typo .inner').css('text-decoration','underline');
+            // $('#typo .inner').css('border-bottom','5px solid red');
+            // $('#typo .inner').css('opacity',0.5); //숫자는 따옴표 안쓴다
+
+            // $('#typo .inner').css({
+            //     textDecoration : 'underline',
+            //     borderBottom : '5px solid red',
+            //     opacity : 0.5
+            // });
+                $('h1').css('color','red');
+
+            // $('#typo, h1') .mouseover (function(){
+            //     $('#typo, h1').css('background-color','green');
+            // })
+            
+            // .mouseout (function(){
+            //     $('#typo, h1').css('background-color','red');
+            // });
+
+
+
+            $('#typo, h1') .mouseover (function(){
+                $(this).css('background-color','green');
+            }) //'#typo, h1'를 this로 바꿈 
+                //this :이벤트가 일어난그것 
+            
+            .mouseout (function(){
+                $(this).css('background-color','red');
+            });
+
+        });
+
+
+    </script>
+
+</head>
+<body>
+    <h1>빠바빨간맛</h1>
+    <div id="typo">
+        <div class="inner">creative</div>
+    </div>
+</body>
+</html>
