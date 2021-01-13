@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../reset.css">
+    <style>
+        .cube {
+            perspective: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 1000px;
+            height: 800px;
+            border: 1px solid lightskyblue;
+        }
+
+        .cube>.stage {
+            transform-style: preserve-3d;
+            position: relative;
+            width: 300px;
+            height: 300px;
+            transition: all .5s ease; 
+        }
+
+        .cube>.stage>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;left: 0;
+            width: 300px;
+            height: 300px;
+            font: bold 150px/150px arial, sans-serif;
+            color: #fff;
+        }
+
+        .cube>.stage>.front {
+            transform: rotate(0deg) translateZ(150px);
+            background: rgba(255, 168, 168, 0.5);
+        }
+
+        .cube>.stage>.back {
+            transform: rotateY(180deg) translateZ(150px);
+            background: rgba(255, 206, 149, 0.5);
+        }
+
+        .cube>.stage>.top {
+            transform: rotateX(90deg) translateZ(150px);
+            background: rgba(255, 233, 159, 0.5);
+        }
+
+        .cube>.stage>.bottom {
+            transform: rotateX(-90deg) translateZ(150px);
+            background: rgba(255, 251, 169, 0.5);
+        }
+
+        .cube>.stage>.left {
+            transform: rotateY(90deg) translateZ(150px);
+            background: rgba(217, 255, 197, 0.5);
+        }
+
+        .cube>.stage>.right {
+            transform: rotateY(-90deg) translateZ(150px);
+            background: rgba(172, 239, 255, 0.5);
+        }
+        
+/*        이벤트*/
+        #front:checked ~ .cube>.stage{
+            transform: rotate3d(0,0,0, 0deg); 
+        }
+        
+        #back:checked ~ .cube>.stage{
+            transform: rotate3d(0,1,0, 180deg); 
+        }
+        
+        #top:checked ~ .cube>.stage{
+            transform: rotate3d(1,0,0, -90deg); 
+        }
+        
+        #bottom:checked ~ .cube>.stage{
+            transform: rotate3d(1,0,0, 90deg); 
+        }
+        
+        #left:checked ~ .cube>.stage{
+            transform: rotate3d(0,1,0, -90deg); 
+        }
+        
+        #right:checked ~ .cube>.stage{
+            transform: rotate3d(0,1,0, 90deg); 
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+   
+   
+   <input type="radio" name="cube" id="front"><label for="front">앞쪽</label>
+   <input type="radio" name="cube" id="back"><label for="back">뒤쪽</label>
+   <input type="radio" name="cube" id="top"><label for="top">위쪽</label>
+   <input type="radio" name="cube" id="bottom"><label for="bottom">아래쪽</label>
+   <input type="radio" name="cube" id="left"><label for="left">왼쪽</label>
+    <input type="radio" name="cube" id="right"><label for="right">오른쪽</label>
+   
+   
+   
+    <!--article.cube>h1+div.stage>div*6 -->
+    <article class="cube">
+        <h1 class="hidden">CUBE</h1>
+        <div class="stage">
+            <div class="front">1</div>
+            <div class="back">2</div>
+            <div class="top">3</div>
+            <div class="bottom">4</div>
+            <div class="left">5</div>
+            <div class="right">6</div>
+        </div>
+    </article>
+    
+    
+</body>
+
+</html>

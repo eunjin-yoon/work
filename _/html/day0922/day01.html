@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>포지션</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        /* css 순서
+        1.위치관련 (레이아웃)
+        position:;
+        left:; ...
+        display:;
+        float:;clear:;
+        overflow:;
+        2.크기관련
+        margin:;
+        padding:;
+        border:;
+        width:; height:;
+        3.배경
+        background:;
+        4.글자관련
+        text:;
+        font:;
+        5.색상관련
+        color:;
+        */
+
+        /*
+        
+        position: absolute; 위치값(left, right..)을 주지 않으면 
+        주변 요소가 static이라면, absolute 요소는 static 위치에 있으려고 한다.
+        
+        absolute, fixed는 크기는 컨텐츠만큼 작아진다.
+        (block요소처럼 크기 지정은 당연히 가능)
+        
+        relative는 static이었던 상태의 크기 값을 그대로 갖고 작동한다.
+        
+        fixed는 조상요소 중에서 absolute가 있다면 위치값을 지정하지 않으면,
+        static처럼 있으려고 한다.
+        
+        */
+        section {
+            position: relative;
+            /*calc() 단위가 다른 수치를 계산할 수 있다. + - 더하기 빼기만 가능*/
+            left: calc(50% -500px);
+            top:calc(50%-250px):;
+            border: 1px solid green;
+            width: 1000px; height: 500px;
+        }
+
+
+        div {
+            position: absolute;
+            right: 500px;
+            /* 좌우가 같이 있다면 left만 작동 */
+            bottom: 100px;
+            /* 상하가 같이 있다면 top만 작동 */
+            border: 1px solid red;
+            width: 300px;
+            height: 100px;
+            background: rgba(255, 0, 0, .5);
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div>a<span>b</span>c</div>
+    </section>
+
+    <h1>일반요소</h1>
+
+
+</body>
+
+</html>

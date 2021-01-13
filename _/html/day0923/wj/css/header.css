@@ -1,0 +1,180 @@
+ html {
+     font-size: 62.5%;
+ }
+
+ a {
+     text-decoration: none;
+ }
+
+ /*text-decoration:overline || line-through || underline || none*/
+ /*css는 단계적으로 한다
+         1. 외곽에서 안쪽으로 들어간다. 
+         2. 위에서 아래로 내려간다. 
+        
+         선택자를 container---> contents
+        */
+ body {
+     background: url(../imgs/doc_bg.gif) repeat-x 50% 0;
+ }
+
+ header {
+     margin: 0 auto;
+     margin-bottom: 1.7rem;
+     width: 108rem;
+
+ }
+
+ header > div {
+     height: 8.4rem;
+ }
+
+ header > div > h1 {
+     float: left;
+     margin: 1.5rem 19.6rem 0 0.5rem;
+ }
+
+ header > div > form {
+     float: left;
+     margin-top: 2rem;
+     width: 33.6rem;
+     height: 3.9rem;
+     background: url(../imgs/search_bg.gif) no-repeat 0 0;
+ }
+
+ header > div > form > input[type^="s"] {
+     float: left;
+     margin: 0.9rem 0 0 1.2rem;
+     width: 25.8rem;
+     height: 2.2rem;
+     border: 0 none;
+ }
+
+ header > div > form > input[type^="i"] {
+     float: right;
+ }
+
+ header > div > dl {
+     float: right;
+     margin-top: 3.4rem;
+     font: 1.2rem/1.2rem "맑은 고딕", "돋움", sans-serif;
+ }
+
+ header > div > dl > dd {
+     position: relative;
+     float: left;
+     margin: 0 1.5rem;
+ }
+
+ header > div > dl > dd:not(:last-child):after {
+     position: absolute;
+     top: 0;
+     right: -1.5rem;
+     content: "";
+     width: 0;
+     height: 1.1rem;
+     border-left: 0.1rem solid #c9c9c9;
+
+ }
+
+ header > div > dl > dd > a {
+     color: #444;
+ }
+
+ /*네비게이터*/
+ header > nav {
+     padding-left: 0.1rem;
+     height: 4.6rem;
+ }
+
+ header > nav > ul {
+     border-right: 0.1rem solid #eaeae9;
+     width: 103.8rem;
+     height: 4.6rem;
+ }
+
+ header > nav > ul > li {
+     position: relative;
+     float: left;
+     border-left: 0.1rem solid #eaeae9;
+     width: 17.2rem;
+     height: ;
+     font-weight: 800;
+
+ }
+
+ header > nav > ul > li > a {
+     display: block;
+     text-align: center;
+     font-size: 1.4rem;
+     line-height: 4.6rem;
+     color: #3d3c3c;
+ }
+
+ header > nav > ul > li > ul {
+     display: none;
+     position: absolute;
+     left: -0.1rem;
+     top: 4.9rem;
+     padding: 0.8rem;
+     border-left: 0.1rem solid #e2e2e2;
+     border-bottom: 0.3rem solid #1e61a8;
+     width: calc(100% - 1.6rem);
+     height: 18.4rem;
+     font-size: 1.2rem;
+     background: #ffffff;
+ }
+
+ header > nav > ul > li:last-child > ul {
+     border-right: 0.1rem solid #e2e2e2;
+
+ }
+
+ header > nav > ul > li > ul > li {
+     font-size: 1.2rem;
+     line-height: 2.4rem;
+ }
+
+ header > nav > ul > li > ul > li > a {
+     position: relative;
+     padding-left: 0.7rem;
+     display: block;
+     color: #444444;
+ }
+
+ header > nav > ul > li > ul > li > a:after{
+     position: absolute;
+     left: 0; top: 1rem;
+     content: "";
+    width:0; height: 0;
+     border: 0.2rem solid rgba(255, 255, 255, 0);
+     border-left-color: #b0b0b0;
+
+ }
+
+ /* 이벤트 설정 */
+ header > nav > ul > li > a:hover {
+     font-size: 1.4rem;
+     color: #1e61a8;
+ }
+
+ header > nav > ul > li > ul > li:hover > a {
+     color: #1e61a8;
+ }
+
+header > nav > ul:hover > li > ul {display: block;}
+
+header > nav > ul > li:hover > ul {background: #eef4ef;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

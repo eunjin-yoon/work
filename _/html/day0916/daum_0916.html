@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        form {
+            border: 1px solid #0089ff;
+            width: 519px;
+            height: 44px;
+        }
+
+        form>input,from>button {
+            float: left;
+        }
+        
+        form>input[type^="se"]{
+            
+            margin: 8px 0 0 15px ;
+            width: 415px; height: 24px;
+            border: 0 none;
+            outline: 0 none; /*outline 요소에 커서가 위치했을 때 이벤트로 나타나는 가상의 보더 border의 것과 똑같음.*/
+        }
+        form>button
+        {border: 0 none;
+        width: 30px;height:44px;
+        background: url(imgs/img_keyboard_171229.png) no-repeat 0 0; font-size: 0; line-height: 0;
+            cursor: pointer; /*마우스 커ㅓ의 모양 변경 이벤트가 없는 요소를 a 요소처럼 마우스 커서 위치했을 때 이벤트가 있는 것처럼 변경할 수 있음*/
+        }
+        form>input[type$="t"]{
+            float: right;
+            width: ; height: ;
+            border: 0 none;
+            background: url(imgs/img_keyboard_171229.png) no-repeat -40px -230px;
+            font-size: 0; line-height: 0;
+            cursor: pointer;
+        }
+        
+        
+        form>button:hover{
+            background-position: 0 -50px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <form action="test.jsp">
+        <label for="srch" class="hidden">검색창</label>
+        <input type="search" name="srch" id="srch" />
+        <button>키보드 활성화</button>
+        <input type="submit" value="검색">
+    </form>
+</body>
+
+</html>

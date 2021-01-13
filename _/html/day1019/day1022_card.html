@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../reset.css">
+        <title>Document</title>
+        <style>
+
+            ul {
+                width: 680px;
+                height: 600px;
+                background: #fff;
+            }
+
+            ul > li {
+                position: relative;
+                width: 320px;
+                height: 200px;
+                border-radius: 15px;
+                transform: rotateX(45deg) rotateY(15deg) rotateZ(45deg);
+                transition: all 0.5s cubic-bezier(.17,.67,.83,.67);
+            }
+
+            ul > li:nth-child(1) {
+                z-index: 10;
+                background: linear-gradient(100deg, #fbe2eb 50%, #a6c1ee);
+                box-shadow: 0 0 40px 0 rgba(0,0,50,0.3), 1px 1px 0 1px #17327a;
+            }
+            ul > li:nth-child(2) {
+                z-index: 9;
+                margin-top: -100px;
+                background: linear-gradient(100deg, #fad4ae 50%, #faf1d6);
+                box-shadow: 0 0 40px 0 rgba(0,0,50,0.3), 1px 1px 0 1px #17327a;
+            }
+            ul > li:nth-child(3) {
+                z-index: 8;
+                margin-top: -100px;
+                background: linear-gradient(100deg, #a8edea 50%, #fed6e3);
+                box-shadow: 0 0 40px 0 rgba(0,0,50,0.3), 1px 1px 0 1px #17327a;
+            }
+            ul > li:nth-child(4) {
+                z-index: 7;
+                margin-top: -100px;
+                background: linear-gradient(100deg, #edabad 50%, #f7686b);
+                box-shadow: 0 0 40px 0 rgba(0,0,50,0.3), 1px 1px 0 1px #17327a;
+            }
+
+            ul > li:hover {
+                transform: rotateX(15deg) rotateY(0deg) rotateZ(10deg) translate3d(250px,80px,0);
+            }
+
+            section {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin: 0 auto;
+                width: 800px;
+                height: 800px;
+                background: -webkit-radial-gradient(50% 50%,farthest-corner circle, #f1f5ff, #c5e7ff);
+            }
+            section > article {
+                width: 300px;
+                height: 450px;
+                border-radius: 15px;
+                transform: perspective(500px) rotateX(45deg) translateY(-300px);
+                transition: all 0.5s ease;
+            }
+
+            section > article:nth-of-type(1) {
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(100deg, #edabad 50%, #f7686b);
+                box-shadow: 0 30px 30px 0 rgba(0,0,50,0.3), 1px 1px 0 1px #f7ed68;
+            }
+            section > article:nth-of-type(2) {
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(100deg, #724518 50%, #a07525);
+                box-shadow: 0 30px 30px 0 rgba(0,0,50,0.3), 1px 1px 0 1px #f7ed68;
+            }
+
+            section > article:hover {
+                transform: perspective(500px) rotateX(0deg) translateY(0px);
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="hidden">3D 애니메이션</h1>
+
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        <!--section>h1+article*2>h1-->
+        <section>
+            <h1 class="hidden">소실점을 각자 지정</h1>
+            <article>
+                <h1>짬뽕</h1>
+            </article>
+            <article>
+                <h1>짜장면</h1>
+            </article>
+        </section>
+
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>transform</title>
+    <link rel="stylesheet" href="../../reset.css">
+    <style>
+        div {
+            width: 400px;
+            height: 100px;
+            background: rgba(180, 100, 120, 1);
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+            /*transform:  rotate(45deg) scale(2, 1) translate(300px, 100px);*/
+            /* transform 작성할 때 순서유의할 것*/
+
+            transform: rotate3d (1,0,0, 450deg);
+            
+            
+            /* transform 속성은 블럭요소만 가능하다.*/
+            /* skew는 헷갈리니까 앞에만 기억... x축... 링크가 기울어질 때 사용*/
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>transform</h1>
+    <p>트랜스폼을 적용한요소는 position:relative를 적용한 것과 비슷한 상황을 연출한다.</p>
+    <div>트랜스폼</div>
+    <p>트랜스폼 하단요소</p>
+</body>
+
+</html>

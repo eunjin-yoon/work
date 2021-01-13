@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        @font-face{
+            font-family: 'myFont';
+            src:url(fonts/RalewayDots-Regular.eot);
+            src:local('※'),
+                url(fonts/RalewayDots-Regular.woff) format('woff'),
+                url(fonts/RalewayDots-Regular.ttf) format('truetype');
+        }
+         
+        @font-face{
+            font-family: 'myFont2';
+            src:url(fonts/RalewayDots-Regular.eot);
+            src:local('※'),
+                url(fonts/RalewayDots-Regular.woff) format('woff'),
+                url(fonts/RalewayDots-Regular.ttf) format('truetype');
+        }
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            font-size: 2.4rem;
+        }
+
+        /* text-align: left || center || right || justify 좌우정렬 
+        justify 마지막 행은 적용되지 않음 */
+        /* 말줄임 표시는 overflow:hidden;과 white-space;와 width;와 text-overflow;ellipsis라는
+        속성과 값을 사용해야 하기 때문에 overflow, white-space, width를 배운 이후에*/
+        /* text-shadow: x축이동 y축이동 blur처리 색상처리;
+        #색상은 색상명 (red, green, blue..)
+                hexa코드 (16진수 코드 #ff00ff)
+                rgba (red, green, blue, alpha);*/
+        h1{font-family: 'myFont2', sans-serif}
+        p {
+            /* 축약 wight style size/ line-height family */
+            font:1.6rem '맑은고딕', 돋움, sans-serif;
+            text-align: justify;
+            text-shadow: 1px 1px 0 #000;
+            color: #fff;
+            /* rgba(255,255,255,1) */
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>text 하</h1>
+    <p>text속성은 좌우 정렬과 빈 여백 조정 그리고 말줄임 표시가 있다.
+        마지막으로 그래픽적인 그림자 생성이 있다.</p>
+</body>
+
+</html>

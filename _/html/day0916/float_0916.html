@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>float_example</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        div {
+
+            border: 10px solid lightgreen;
+        }
+
+        h1,ul,p {
+            float: left;
+            border: 1px solid green;
+            width: 300px;
+        }
+
+
+        h1 {
+            margin-top: 300px;
+        }
+
+
+        ul {
+            /*height:60px*/
+            overflow: hidden;
+        }
+
+        ul>li {
+            float: right;
+            width: 40px;
+            height: 50px;
+            border: 5px solid darkgreen;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <h1>float요소</h1>
+        <ul>
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+            <li>d</li>
+        </ul>
+        <p>플롯 하단의 단락 요소</p>
+    </div>
+
+
+</body>
+
+</html>

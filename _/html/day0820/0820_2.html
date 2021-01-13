@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    /*글자 관련 속성은 상속된다*/
+        html{font-size: 62.5%;} /*전체 폰트의 크기를 지정한다. rem을 사용하기 위한 준비*/
+        /*unit 정리
+        rem-->html의 font-size를 기준으로 배율을 작동한다.
+        ex--> html{font-size:62.5%;} 기본폰트 16px를 의미한다.
+        기본폰트사이즈 16px*0.625 ===> 10px
+        선택자 {font-size:1rem;} ===> 1rem은 10px
+        선택자 {width: 30rem;}===> 30rem은 300px
+        
+        em은 현재 요소의 fonr-size에 대한 배율
+        div>p*2 의 요소가 있다고 가정했을 때
+        ex --> div {font-size: 2rem; width: 3em;} 2rem ===> 20px
+                                                  3em ==> 3*20은 60px
+        
+        line-height는 조상요소로부터 상속된다.
+        
+        */
+        body>div{
+            font-size: 1rem; line-height: 1rem;
+        }
+        body>div>p:first-child{font-size: 1.8rem;}
+        body>div>p:last-child{line-height: 1.6;}
+    
+    </style>
+</head>
+<body>
+   <div>
+
+  	<p>이 문단의 font-size는 18픽셀이지만, 상속받은 'line-height' 값은 단지 10픽셀이다. 이것은 텍스트 행이 작은 치수에 의해 서로 겹쳐지기 때문이다. </p>
+
+  	<p>이 문단의 font-size는 18픽셀이지만, 상속받은 'line-height' 값은 단지 10픽셀이다. 하지만, line-height의 값을 다시 수정했다. font-size의 1.6배로 수정했다. </p>
+
+  </div>
+    
+</body>
+</html>

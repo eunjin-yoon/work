@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>flex는 모바일에 필수다</title>
+    <link rel="stylesheet" href="../../../reset.css">
+    <style>
+        body>ul {
+            display: flex;
+            flex-wrap:wrap;
+            justify-content: space-around;
+            align-items: stretch;
+            border: 10px solid lightpink;
+            height: 800px;
+        }
+
+        body>ul>li {
+            display: flex;
+            align-items: center;
+            border: 5px solid hotpink;
+        }
+
+        body>ul>li>a {
+            background: lightblue;
+        }
+
+        body>ul>li:nth-child(1) {
+            flex: 0 0 500px;
+        }
+
+        body>ul>li:nth-child(2) {
+            flex: 0 0 500px;
+        }
+
+        body>ul>li:nth-child(3) {
+            flex: 0 0 500px;
+        }
+
+        body>ul>li:nth-child(4) {
+            flex: 0 0 500px;
+        }
+
+        body>ul>li:nth-child(5) {
+            flex: 0 0 500px;
+        }
+
+        /*container*/
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            border: 10px solid purple;
+             height: 800px;
+        }
+
+        div>* {
+            border: 5px solid orange;
+        }
+
+        /*content*/
+        div>p:first-of-type {
+            flex: 0 1 200px;
+            /*첫번째 값:gorw 두번째값:shrink 세번째값:flex-basis*/
+        }
+
+        div>ul {
+            display: flex;
+            flex: 0 1 300px;
+        }
+
+        /*ul content*/
+        div>ul>li {
+            border: 5px solid lightgreen;
+        }
+
+        div>p:last-of-type {
+            flex: 0 1 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="#">AAAAA</a></li>
+        <li><a href="#">BBBB</a></li>
+        <li><a href="#">CCC</a></li>
+        <li><a href="#">DD</a></li>
+        <li><a href="#">E</a></li>
+    </ul>
+
+    <div>
+        <p>prev</p>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <p>next</p>
+    </div>
+</body>
+
+</html>

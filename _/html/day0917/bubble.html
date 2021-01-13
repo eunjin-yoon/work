@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<title>거품</title>
+
+	<link rel="stylesheet" href="css/font-awesome.css">
+
+<style>
+
+*{margin:0; padding:0;}
+
+.demo-container {
+
+	 height:300px;
+
+	 overflow:hidden;
+
+	 position:relative;
+
+	 background: radial-gradient(ellipse,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%);
+
+ }
+
+.bubble1, .bubble2, .bubble3, .bubble4 {
+
+	 position:absolute;
+
+	 box-shadow:0 20px 30px rgba(0, 0, 0, 0.2), 0px 10px 30px 5px rgba(255, 255, 255, 1) inset ;
+
+	 border-radius:50%;
+
+ 
+
+	 transition: all .5s ease-in-out;
+
+ }
+
+.bubble1 { width:100px; height:100px; top:20%; left:50%; } 
+
+.bubble2 { width:200px; height:200px; left:20%; top:10%; }
+
+.bubble3 { width:150px; height:150px; left:50%; top:40%; }
+
+.bubble4 { width:90px; height:90px; left:70%; top:15%; }
+
+.bubble1:hover { margin-top:30px; width:90px; }
+
+.bubble2:hover { margin-left:20px; height:190px; }
+
+.bubble3:hover { margin-top:60px; width:160px; }
+
+.bubble4:hover { margin-left:50px; height:100px; }
+
+.demo-text{ position:absolute; bottom:20px; right:15px; font-size:36px; color:#666; text-shadow:0 2px 0 #000; }
+
+	</style>
+
+</head>
+
+<body>
+
+ 	<h1>거품 </h1>
+
+	<div class="demo-container">
+
+	 <span class="bubble1"></span>
+
+	 <span class="bubble2"></span>
+
+	 <span class="bubble3"></span>
+
+	 <span class="bubble4"></span>
+
+	 <div class="demo-text">거품</div>
+
+	</div>
+
+</body>
+
+</html>

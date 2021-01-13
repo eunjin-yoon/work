@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        h1 {
+
+            /*텍스트에 그라디언트 적용하기 또는 텍스트에 배경 이미지 적용하기 
+            
+            1.text-fill-color:transparent; 투명한 색상으로 문장의 색상을 적용한다.
+            2.배경으로 그라디언트를 적용하거나, 이미지를 불러온다.
+            3.배경을 글자만큼 나오게 마스킹 한다.
+            background-clip:text;
+        
+            */
+
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+            -o-text-fill-color: transparent;
+            -ms-text-fill-color: transparent;
+            text-fill-color: transparent;
+            
+            background: linear-gradient(90deg, aqua,blue,purple);
+            
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -o-background-clip: text;
+            -ms-background-clip: text;
+            background-clip: text;
+            
+            
+            font:bold 100px/150px "맑은고딕",sans-serif;
+            
+            
+        }
+
+
+
+        div {
+            /*
+            그라디언트는 블럭요소에 선형과 원형으로 배경이미지로 지정 할 수 있다. 보더에도 그라디언트를 적용할 수 있으나 배경이미지가 아닌 보더 이미지로 적용할 수 있다. 보더이미지는 배경이미지 배운이후에...
+            
+            
+            1.선형
+            background-image:linear-gradient(방향, color color-stop,,,, color-stop);
+            
+            2.원형
+            background-image:radial-gradient(중심점, 모양 범위, color color-stop,,, colr color stop);
+            
+            각도는 시계방향으로 지정된다. 270deg는 왼쪽 방향으로 그라디언트가 지정되며 각도 이외에 toLeft,toTop, toRight, toBootom으로도 사용딜 수 있다.
+            
+            */
+
+            border: 1px solid black;
+            width: 600px;
+            height: 300px;
+        }
+
+        div:nth-of-type(2) {
+            width: 400px;
+            height: 800px;
+            /* radial-gradient(중심점, 모양에는 circle eclipse가 있으나 circle만 거의 사용  범위-closest-side||closest-corner||forthest-side||forthest-corner,*/
+
+
+            /*
+            vender-prefix 특정한 속성이 아직 개발이 끝나지 않으면,
+            vender-prefix로 구분을 한다.
+            사파리, 크롬
+            -webkit-
+            오페라
+            -o-
+            파이어폭스
+            -moz-
+            인터넷익스프롤러
+            -ms-
+    
+            */
+            background: -webkit- radial-gradient(100px 200px, circle farthest-corner, red, yellow);
+            background: -ms- radial-gradient(100px 200px, circle farthest-corner, red, yellow);
+            background: -o- radial-gradient(100px 200px, circle farthest-corner, red, yellow);
+            background: -moz- radial-gradient(100px 200px, circle farthest-corner, red, yellow);
+            background: -corner- radial-gradient(100px 200px, circle farthest-corner, red, yellow);
+            background: radial-gradient(100px 200px, circle farthest-corner, red, yellow);
+
+        }
+
+
+        div:nth-of-type(3) {
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+            background: -webkit-radial-gradient(circle, black 20px, yellow 20px, yellow 40px, green 40px, green 60px, red 60px, red 80px, white 80px, white 100px);
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>그라디언트</h1>
+    <div></div>
+    <div></div>
+    <div>3번째</div>
+</body>
+
+</html>

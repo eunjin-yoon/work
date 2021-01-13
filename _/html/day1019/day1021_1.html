@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../reset.css">
+    <style>
+        #loadingImg {
+            margin: 100px auto;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background:
+                url(imgs/loading_1bg.png) no-repeat 0 -300px,
+                url(imgs/loading_4.png) no-repeat 0 -300px,
+                url(imgs/loading_4bg.png) no-repeat 0 -300px,
+                url(imgs/loading_3.png) no-repeat 0 -300px,
+                url(imgs/loading_3bg.png) no-repeat 0 -300px,
+                url(imgs/loading_2.png) no-repeat 0 -300px,
+                url(imgs/loading_2bg.png) no-repeat 0 -300px,
+                url(imgs/loading_1.png) no-repeat 0 -300px;
+            background-color: #ff9b9b;
+
+            animation: loading 8s ease infinite;
+        }
+
+        @keyframes loading {
+            0% {
+                background-position: 0 -300px, 0 -300px, 0 -300px, 0 -300px, 0 -300px, 0 -300px, 0 -300px, 0 -300px;
+            }
+
+            12.5% {
+                background-position: 0 -300px, 0 -300px, 0 -300px, 0 -300px, 0 -300px, 0 -300px, 0 -300px, 0 0;
+            }
+
+            25% {
+                background-position: 0 -300px, 0 -300px, 0 -300px, 0 -300px, 0 -300px, 0 -300px, 0 0, 0 0;
+            }
+
+            37.5% {
+                background-position: 0 -300px, 0 -300px, 0 -300px, 0 -300px, 0 -300px, 0 0, 0 0, 0 0;
+            }
+
+            50% {
+                background-position: 0 -300px, 0 -300px, 0 -300px, 0 -300px, 0 0, 0 0, 0 0, 0 0;
+            }
+
+            62.5% {
+                background-position: 0 -300px, 0 -300px, 0 -300px, 0 0, 0 0, 0 0, 0 0, 0 0;
+            }
+
+            75% {
+                background-position: 0 -300px, 0 -300px, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+            }
+
+            87.5% {
+                background-position: 0 -300px, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+            }
+
+
+            100% {
+                background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+            }
+
+        }
+
+        body {
+            background: mistyrose;
+        }
+
+        #loading2 {
+            position: relative;
+            margin: 100px auto;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(90deg, #fff 30%, transparent 50%);
+            transform: rotate(0deg);
+            animation: loading2 2s linear infinite;
+        }
+
+        #loading2:before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: "";
+            border-radius: 100% 0 0 0;
+            width: 100px;
+            height: 100px;
+            background: #fff;
+        }
+
+        #loading2:after {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            content: "";
+            border-radius: 50%;
+            width: 160px;
+            height: 160px;
+            background: mistyrose;
+        }
+
+        @keyframes loading2 {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+/*------------------------------------------------------------로딩3*/
+
+        #loading3 {
+            margin: 0 auto;
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+
+
+        #loading3>div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+        }
+
+
+        #loading3-1 {
+            animation: loading3 1.5s cubic-bezier(0,.55,.5,1.01) infinite;
+        }
+
+        #loading3-2 {
+            animation: loading3 1.5s cubic-bezier(0,.42,.5,1.01) infinite;
+        }
+
+        #loading3-3 {
+            animation: loading3 1.5s cubic-bezier(0,.27,.5,1.01) infinite;
+        }
+
+        #loading3-4 {
+            animation: loading3 1.5s cubic-bezier(0,.13,.5,1.01) infinite;
+        }
+
+
+
+        #loading3-1:before {
+            position: absolute;
+            left: calc(50% - 10px);
+            top: 0px;
+            content: "";
+            border-radius: 50%;
+            width: 22px;
+            height: 20px;
+            background:snow;
+            z-index: 1;
+           
+        }
+
+        #loading3-2:after {
+            position: absolute;
+            left: calc(50% - 8px);
+            top: 2;
+            content: "";
+            border-radius: 50%;
+            width: 20px;
+            height: 18px;
+            background: lightpink;
+           
+        }
+
+
+
+
+        #loading3-3:before {
+
+            position: absolute;
+            z-index: 2;
+
+            left: calc(50% - 6px);
+            top: 4px;
+
+            content: "";
+
+            border-radius: 50%;
+
+            width: 14px;
+            height: 12px;
+
+            background: hotpink;
+           
+
+        }
+
+        #loading3-4:after {
+
+            position: absolute;
+            z-index: 3;
+
+            left: calc(50% - 4px);
+            top: 6px;
+
+            content: "";
+
+            border-radius: 50%;
+
+            width: 10px;
+            height: 8px;
+
+            background: mediumvioletred;
+           
+        }
+
+
+
+        @keyframes loading3 {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loadingImg"></div>
+    <div id="loading2"></div>
+    <div id="loading3">
+        <div id="loading3-1"></div>
+        <div id="loading3-2"></div>
+        <div id="loading3-3"></div>
+        <div id="loading3-4"></div>
+    </div>
+</body>
+
+</html>

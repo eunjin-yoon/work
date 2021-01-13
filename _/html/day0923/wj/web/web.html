@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../reset.css">
+    <style>
+        html {
+            font-size: 62.5%;
+        }
+
+        aside {
+            position: relative;
+            float: left;
+            margin: 0 border:;
+            width: 43.2rem;
+            height: 44.2rem;
+        }
+
+
+        aside>ul#banner_list>li {
+            position: absolute;
+            left: 0; top: 0;
+        
+        }
+
+        aside>ul#banner_list>li:first-child{z-index: 100;}
+    
+        aside>ul#banner_bullet {
+            position: absolute; 
+            z-index: 200;
+            left: 0; bottom: 2.2rem;
+            width: 100%;
+            text-align: center;
+        }
+
+        aside>ul#banner_bullet>li {
+            display: inline-block;
+          
+        }
+
+        aside>ul#banner_bullet>li>img {
+             width: 2rem; height: 2rem;
+        }
+        
+        aside>p#banner_btn{
+            position: absolute; z-index: 300;
+            right:1.2rem ; bottom: 2rem;
+            
+            
+        }
+        
+        aside>p#banner_btn>img{
+             width: 2rem; height: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!--aside>h1+h1+(ul>li*2>a[href="#"]>img)+h2+(ul>li>img)+h2+p>img-->
+
+    <aside>
+        <h1 class="hidden">메인배너</h1>
+        <h1 class="hidden">배너 목록</h1>
+        <ul id="banner_list">
+            <li><a href="#"><img src="../../wj/imgs/aoa_banner.jpg" alt="웹 접근성 개선지원 사업 안내 웹  접근성 개선지원 사업 안내 접근성 오픈 아카이브 유투브 채널 접근성 오픈 아카데이 유튜브 채널 매주 월요일 콘텐츠 업데이트!"></a></li>
+            <li><a href="#"><img src="../../wj/imgs/banner02.jpg" alt="배너"></a></li>
+        </ul>
+        <h2>배너 페이징</h2>
+        <ul id="banner_bullet">
+            <li><img src="../../wj/imgs/circle_on.png" alt="첫 번째 배너로 이동"></li>
+
+            <li><img src="../../wj/imgs/circle_off.png" alt="두 번째 배너로 이동"></li>
+
+        </ul>
+        <h2 class="hidden">배너 자동재생</h2>
+        <p id="banner_btn"><img src="../../wj/imgs/btn_pause.png" alt="배너 자동재생 또는 일시정지"></p>
+    </aside>
+</body>
+
+</html>

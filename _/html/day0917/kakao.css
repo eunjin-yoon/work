@@ -1,0 +1,138 @@
+section {
+    min-width: 320px;
+    min-height: 480px;
+    background: #a0c1d7;
+}
+
+
+.me {
+    position: relative;
+    clear: both;
+    float: right;
+    margin-top:10px;
+    width: 80%;
+    /*    position: absolute는 기준이 되는 요소로부터 크기와 위치를 제한 받게된다. 아빠 크기가 80%;*/
+}
+
+.me > h1 {
+    position: absolute;
+    right:0;top:0;
+    width:30px; height:30px;
+    border:1px solid red;
+}
+
+.me > h1 > em {
+    display: block;
+    width: 30px;
+    font-size: 0;
+    line-height: 0;
+    height: 30px;
+    border-radius: 15px;
+    /* 단위를 %로 지정하면 패딩과 보더크기까지 포함*/
+    background: #fff url(imgs/me.png) no-repeat 50% 50%/cover;
+    box-shadow: -1px 1px 0 rgba(80,80,80,.5) inset;
+}
+
+.me > h1 > .nickname {
+    position: absolute;
+    top: 0;
+    right: 35px;
+    font-size: 10px;
+    line-height: 10px;
+    letter-spacing: -1px;
+    color: #000;
+    max-width: 70px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.me > .txt {
+    position: relative;
+    float: right;
+    max-width: 100%;
+    margin-right: 35px; margin-top:20px; 
+    /*기준요소의 크기만큼 커지겠다. 즉, article.me의 width: 80%만큼 커지겠다.   */
+    /*    보더는 각각써야한다 축약해서 쓰면안됨, 보더이미지 쓰려면 크기있어야함  */
+    border-width: 20px 18px 9px 10px;
+    border-style: solid;
+    border-color: white;
+    border-image: url(imgs/talkboxMe.png) fill 20 18 9 10 stretch;
+    /*    보더이미지 유닛(단위)쓰면안됨*/
+}
+
+.me > .txt > time {
+    position: absolute;
+    left: -63px;
+    bottom: -9px;
+    width: 50px;
+    height: 12px;
+    font-size: 10px;
+    line-height: 10px;
+
+}
+
+
+
+
+.you {
+    margin-top: 20px;
+    clear: both;
+    position: relative;
+    float: left;
+    max-width: 80%;
+}
+
+.you > h1 {
+    position:absolute;
+    left:0; top:0;
+}
+
+.you > h1 > em {
+    display: block;
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+    line-height: 0;
+    border-radius: 15px;
+    background: #fff url(imgs/you.png) no-repeat 0 0/cover;
+}
+
+
+.you > h1 > .nickname {
+    position: absolute;
+    top: 0; left: 35px;
+    font-size: 10px;
+    line-height: 10px;
+    letter-spacing: -1px;
+    color: #000;
+    max-width: 70px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
+}
+
+
+.you > .txt {
+    position:relative;
+    float:left;
+    margin-left: 35px;
+    margin-top: 20px;
+    max-width: 100%;
+    border-width: 20px 11px 11px 18px;
+    border-style: solid;
+    border-color: #fff;
+    border-image: url(imgs/talkboxU.png) fill 20 11 11 18 stretch;
+
+}
+
+.you > .txt > time {
+    position: absolute;
+    right: -63px;
+    bottom: -9px;
+    width: 50px;
+    height: 12px;
+    font-size: 10px;
+    line-height: 10px;
+}
