@@ -1,0 +1,344 @@
+/*
+---------------------------------------------------------------------------
+                            카페_스토리
+---------------------------------------------------------------------------
+*/
+
+.element01 {
+  position: absolute;
+  left: 15%;
+  top: 58%;
+}
+
+.element01>p:nth-child(1) {
+  font-size: 85px;
+  margin-bottom: 27px;
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+
+}
+
+.element01>p:nth-child(2) {
+  font-size: 22px;
+  color: #dddddd;
+  font-family: 'Playfair Display', serif;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  background: url(imgs/banner-02.jpg) no-repeat center/cover;
+  height: 470px;
+}
+
+
+
+.colorbox {
+  margin: 0 auto;
+  text-align: center;
+  background: #DCE5E5;
+}
+
+.colorbox>p {
+  font-size: 20px;
+  line-height: 30px;
+  color: #718CA8;
+  font-family: 'Noto Sans KR', sans-serif;
+  padding: 50px;
+}
+
+.title {
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.title>p:nth-child(1) {
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.title>p:nth-child(2) {
+  margin-top: 30px;
+  font-size: 48px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+  color: #01406B;
+}
+
+.story01 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.story01>.imgsbox {
+  position: relative;
+}
+
+#picture01 {
+  margin-top: 50px;
+  width: 400px;
+  opacity: 0;
+}
+
+#picture01.animate {
+  transform: translateX(3em);
+}
+
+
+/* anmate 공통 속성 */
+.animate {
+  animation: fadeIn 1s forwards ease-in;
+  transition: 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.story01>.textbox {
+  width: 620px;
+  margin-top: 40px;
+}
+
+.story01>.textbox>p:nth-child(1) {
+  font-size: 40px;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #222222;
+}
+
+.story01>.textbox>p:nth-child(2) {
+  font-size: 16px;
+  line-height: 25px;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #3d3d3d;
+  margin-top: 45px;
+}
+
+.story01>.textbox>p:nth-child(3) {
+  font-size: 15px;
+  line-height: 25px;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #3d3d3d;
+  margin-top: 25px;
+}
+/*======================story02부분시작======================*/
+
+.story02 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 65%;
+  margin: 0 auto;
+  padding: 200px 0 220px;
+}
+
+.story02>.imgsbox {
+  position: relative;
+}
+
+#picture02 {
+  width: 400px;
+  opacity: 0;
+}
+
+#picture02.animate {
+  transform: translateX(-2em);
+}
+
+#text02 {
+  position: absolute;
+  right: 80px;
+  top: -130px;
+  width: 550px;
+  opacity: 0;
+}
+
+#text02.animate {
+  transform: translateX(-5em);
+}
+
+
+.story02>.textbox {
+  width: 620px;
+  margin-top: 30px;
+}
+
+.story02>.textbox>p:nth-child(1) {
+  font-size: 40px;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #222222;
+}
+
+.story02>.textbox>p:nth-child(2) {
+  font-size: 16px;
+  line-height: 25px;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #3d3d3d;
+  margin-top: 45px;
+}
+
+.story02>.textbox>p:nth-child(3) {
+  font-size: 15px;
+  line-height: 25px;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #3d3d3d;
+  margin-top: 25px;
+}
+
+
+.textbox>button{
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  border-radius: 0.2rem;
+  margin-top: 8rem;
+  padding: 1rem;
+  width: 14rem;
+  background-size: 300%;
+  background-image: linear-gradient(to left,#f56a0d,#ec9a00,#ff2828,#b60000);
+  transition: 1s;
+}
+
+.s2>.story02>.textbox>button:hover{
+background-position: right;
+}
+
+
+/*
+---------------------------------------------------------------------------
+                                footer
+---------------------------------------------------------------------------
+*/
+
+.footer {
+  width: 100%;
+  background-color: #222222;
+  padding: 40px 0;
+}
+
+
+.footer>.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.footer>.top>.box_3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 35rem;
+  padding-bottom: 15px;
+
+}
+
+.footer>.top>.box_3>p>a {
+  display: block;
+  color: #ececec;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 1rem;
+  width: 15rem;
+  height: 1.5rem;
+  background: #313131;
+  transition: 0.3s;
+}
+
+.footer>.top>.box_3>p>a:hover {
+  background: #ce0000;
+}
+
+.footer>.top>.top_right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+  padding-bottom: 15px;
+}
+
+
+
+.footer>.top>.top_right>.sns>ul>li>a>img {
+  width: 35px;
+  height: 35px;
+  background: #313131;
+  margin: 0 7px 0 0;
+  transition: 0.3s;
+}
+
+.footer>.top>.top_right>.sns>ul>li>a>img:hover {
+  background: #ce0000;
+}
+
+.footer>.top>.top_right>.payment>ul>li>a>img {
+  width: 5rem;
+  height: 3.5rem;
+}
+
+
+.footer>.line {
+  margin: 0 auto;
+  width: 135rem;
+  height: 0.1rem;
+  background: rgb(169, 169, 169);
+  margin-top: 2rem;
+}
+
+
+.footer>.bottom {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer>.bottom>p {
+  color: #858585;
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 20px;
+  font-family: 'Noto Sans KR', sans-serif;
+
+}
+
+.top_btn {
+  position: absolute;
+  right: 4%;
+  bottom: 32%;
+  border: none;
+  padding: 7px;
+  background: #8b8b8b;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  transition: 0.3s;
+}
+
+.top_btn:hover {
+  background: #ce0000;
+}
+
+.top_btn>a {
+  color: #ffffff;
+  font-size: 12px;
+}

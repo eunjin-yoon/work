@@ -1,0 +1,227 @@
+html {
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+    font-family:'Noto Sans KR', sans-serif;
+    color: #000;
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 4rem 0;
+    transition: 0.6s;
+    z-index: 99999;
+}
+
+header.sticky{
+    padding: 2.8rem 0;
+    background: #ffffff;
+    box-shadow: 1px 1px 3px #e0e0e0;
+}
+.header{
+    width: 145rem;
+    height: 3rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header>.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header>.logo>a>img{
+    width: 4rem;
+    height: 4rem;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95rem;
+}
+
+
+nav>.menu_1{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60rem;
+    height: 12rem;
+}
+
+nav>.menu_1>li{
+    position: relative;
+  
+    
+}
+
+nav>.menu_1>li>a{
+    line-height: 3.5rem;
+    font-weight: 600;
+    font-size: 1.7rem;
+    font-family: 'Sansita', sans-serif;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px #7c7c7c;
+}
+
+
+
+header.sticky>.header>nav>.menu_1>li>a{
+    color: #131313;
+    font-weight: 600;
+    text-shadow: none;
+    
+}
+
+header>.header>nav>.utile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 5rem;
+
+}
+header>.header>nav>.utile>p:nth-child(1){
+
+   width: 2rem;
+   height: 2rem;
+   background: url(imgs/utile-01.png)50% 50% no-repeat;
+}
+
+header>.header>nav>.utile>p:nth-child(2){
+    width: 2em;
+    height: 2rem;
+    background: url(imgs/utile-03.png)50% 50% no-repeat;
+ }
+
+ header.sticky>.header>nav>.utile>p:nth-child(1){
+    background: url(imgs/utile-02.png)50% 50% no-repeat;
+ }
+ 
+ header.sticky>.header>nav>.utile>p:nth-child(2){
+     
+     background: url(imgs/utile-04.png)50% 50% no-repeat;
+  }
+
+
+
+/*
+---------------------------------------------------------------------------
+                                sub menu
+---------------------------------------------------------------------------
+
+*/
+
+.header>nav>.menu_1>li>.sub_menu{
+    display: none;
+   position: absolute;
+   top: 8.2rem;
+   width: 16.5rem;
+   height: 8rem;
+   z-index: 9999;
+}
+
+
+
+ .header>nav>.menu_1>li>.sub_menu>li>a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #d5d5d5;
+    width: 100rem;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+  }
+
+
+  
+
+  .header>nav>.black{
+      display: none;
+      position: absolute;
+      top: 10px;
+    right: 0;
+      width: 100%;
+      margin: 0 auto;
+      height: 13rem;
+      background: #2c2020;
+      opacity: 0.5;
+  }
+
+
+
+
+/*
+---------------------------------------------------------------------------
+                                event
+---------------------------------------------------------------------------
+*/
+header:hover{
+    background: #ffffff;
+}
+
+header:hover>.header>nav>.menu_1>li>a{
+    color: #131313;
+    font-weight: 600;
+    text-shadow: none;
+    
+}
+
+header:hover>.header>nav>.utile>p:nth-child(1){
+    background: url(imgs/utile-02.png)50% 50% no-repeat;
+ }
+ 
+ header:hover>.header>nav>.utile>p:nth-child(2){
+     
+     background: url(imgs/utile-04.png)50% 50% no-repeat;
+  }
+
+
+
+
+
+.header>nav>.menu_1:hover>li:nth-child(1)>.sub_menu>li>a{
+    display: block;
+}
+
+nav>.menu_1>li:hover>a{
+    border-bottom: 3px solid #ce0000;
+}
+
+.header>nav>.menu_1>li>.sub_menu>li>a:hover{
+    color: #ffffff;
+    font-size: 1.4rem;
+
+  }
+
+header>.header>nav:hover>ul>li>ul.sub_menu{
+    display: block; 
+}
+header>.header>nav:hover>.black{
+    display: block;
+    top: 11rem;
+}
+
+header.sticky>.header>nav:hover>.black{
+    display: block;
+    height: 15rem;
+    background: #2c2020;
+    opacity: 0.5;
+    top: 8.8rem;
+}
+
+header.sticky>.header>nav>.menu_1>li:hover>a{
+    border-bottom: 3px solid #ce0000;
+}
